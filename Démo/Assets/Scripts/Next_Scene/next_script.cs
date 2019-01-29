@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//test
+//test2
 using UnityEngine.SceneManagement;
 
 public class next_script : MonoBehaviour
