@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\luca\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\luca\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_projet 1.0.-212825710.00" t="ExcludeRecursive" />
+    <e p="H:\Nouveau dossier\projet 1.0" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="b1.cs" t="Include" />
+        <e p="b2.cs" t="Include" />
+        <e p="b3.cs" t="Include" />
+        <e p="b4.cs" t="Include" />
+        <e p="b5.cs" t="Include" />
+        <e p="b6.cs" t="Include" />
+        <e p="change.cs" t="Include" />
+        <e p="menuchange.cs" t="Include" />
+        <e p="quit.cs" t="Include" />
+        <e p="sc.cs" t="Include" />
+        <e p="user1change.cs" t="Include" />
+        <e p="user2image.cs" t="Include" />
+        <e p="user2image2.cs" t="Include" />
+        <e p="user2image3.cs" t="Include" />
+        <e p="user2main.cs" t="Include" />
+        <e p="userplay.cs" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="projet 1.0.sln" t="IncludeFlat" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
