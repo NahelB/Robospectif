@@ -26,8 +26,8 @@ public class user2image2 : MonoBehaviour, IPointerClickHandler
              
         }
 
-        tab[0] = sprite.getImageind(x).getSprite();
-        tab[1] = sprite.getImageind(y).getSprite();
+        tab[0] = sprite.getImageind(x).Sprite;
+        tab[1] = sprite.getImageind(y).Sprite;
 
         pics = tab[0];
         ShowRandomImage();

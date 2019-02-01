@@ -21,11 +21,11 @@ public class ChangeImageLoco : MonoBehaviour, IPointerClickHandler
         Main.TabImage tab = Main.Global.TabL;
         int x;
         int y;
-        x = Random.Range(1, tab.getTaille());
-        y = Random.Range(1, tab.getTaille());
+        x = Random.Range(1, tab.Taille);
+        y = Random.Range(1, tab.Taille);
         while (x == y)
         {
-            y = Random.Range(1, tab.getTaille());
+            y = Random.Range(1, tab.Taille);
         }
 
         images = new Main.Image[2];
@@ -40,9 +40,9 @@ public class ChangeImageLoco : MonoBehaviour, IPointerClickHandler
 
     void ShowRandomImage()
     {
-        changetext((pics.getId().ToString()));
-        p.Idcarte1 = pics.getId();
-        image.sprite = pics.getSprite();
+        changetext((pics.Id.ToString()));
+        p.Idcarte1 = pics.Id;
+        image.sprite = pics.Sprite;
         image.enabled = true;   
     }
 

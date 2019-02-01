@@ -98,14 +98,16 @@ public class Main : MonoBehaviour
             this.sprite = sprite;
         }
 
-        public Sprite getSprite()
+        public int Id
         {
-            return this.sprite;
+            get => id;
+            set => id = value;
         }
 
-        public int getId()
+        public Sprite Sprite
         {
-            return this.id;
+            get => sprite;
+            set => sprite = value;
         }
     }
 

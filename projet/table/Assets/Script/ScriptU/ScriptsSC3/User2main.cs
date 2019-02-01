@@ -250,44 +250,44 @@ public class User2main : MonoBehaviour
         if (Main.Global.tabPlayer[1].IsOk == 1)
         {
             texTab[Main.Global.tabPlayer[1].Place].enabled = false;
-            imagetab[1].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[1].Idcarte1).getSprite();
-            imagetab[2].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[1].Idcarte2).getSprite();
-            imagetab[3].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[1].Idcarte3).getSprite();
+            imagetab[1].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[1].Idcarte1).Sprite;
+            imagetab[2].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[1].Idcarte2).Sprite;
+            imagetab[3].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[1].Idcarte3).Sprite;
         }
         if (Main.Global.tabPlayer[2].IsOk == 1)
         {
             texTab[Main.Global.tabPlayer[2].Place].enabled = false;
-            imagetab[6].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[2].Idcarte1).getSprite();
-            imagetab[7].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[2].Idcarte2).getSprite();
-            imagetab[8].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[2].Idcarte3).getSprite();
+            imagetab[6].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[2].Idcarte1).Sprite;
+            imagetab[7].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[2].Idcarte2).Sprite;
+            imagetab[8].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[2].Idcarte3).Sprite;
         }
         if (Main.Global.tabPlayer[3].IsOk == 1)
         {
             texTab[Main.Global.tabPlayer[3].Place].enabled = false;
-            imagetab[11].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[3].Idcarte1).getSprite();
-            imagetab[12].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[3].Idcarte2).getSprite();
-            imagetab[13].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[3].Idcarte3).getSprite();
+            imagetab[11].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[3].Idcarte1).Sprite;
+            imagetab[12].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[3].Idcarte2).Sprite;
+            imagetab[13].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[3].Idcarte3).Sprite;
         }
         if (Main.Global.tabPlayer[4].IsOk == 1)
         {
             texTab[Main.Global.tabPlayer[4].Place].enabled = false;
-            imagetab[16].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[4].Idcarte1).getSprite();
-            imagetab[17].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[4].Idcarte2).getSprite();
-            imagetab[18].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[4].Idcarte3).getSprite();
+            imagetab[16].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[4].Idcarte1).Sprite;
+            imagetab[17].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[4].Idcarte2).Sprite;
+            imagetab[18].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[4].Idcarte3).Sprite;
         }
         if (Main.Global.tabPlayer[5].IsOk == 1)
         {
             texTab[Main.Global.tabPlayer[5].Place].enabled = false;
-            imagetab[21].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[5].Idcarte1).getSprite();
-            imagetab[22].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[5].Idcarte2).getSprite();
-            imagetab[23].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[5].Idcarte3).getSprite();
+            imagetab[21].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[5].Idcarte1).Sprite;
+            imagetab[22].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[5].Idcarte2).Sprite;
+            imagetab[23].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[5].Idcarte3).Sprite;
         }
         if (Main.Global.tabPlayer[6].IsOk == 1)
         {
             texTab[Main.Global.tabPlayer[6].Place].enabled = false;
-            imagetab[26].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[5].Idcarte1).getSprite();
-            imagetab[27].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[5].Idcarte2).getSprite();
-            imagetab[28].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[5].Idcarte3).getSprite();
+            imagetab[26].sprite = Main.Global.TabL.getImageind(Main.Global.tabPlayer[5].Idcarte1).Sprite;
+            imagetab[27].sprite = Main.Global.TabD.getImageind(Main.Global.tabPlayer[5].Idcarte2).Sprite;
+            imagetab[28].sprite = Main.Global.TabE.getImageind(Main.Global.tabPlayer[5].Idcarte3).Sprite;
             
         }
 
