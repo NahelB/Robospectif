@@ -56,6 +56,7 @@ public class User2main : MonoBehaviour
     public Image[] imagetab1;
     private Text[] texTab;
     public Vector2[] vector2;
+    private bool alljoueurselect = false;
 
     void Start()
     {    
@@ -192,8 +193,16 @@ public class User2main : MonoBehaviour
             imagetab[i].enabled = false;
         }
         //Debug.Log(Main.Global.ToString());
-        StartCoroutine(changePlace());
-        InvokeRepeating("requette", 0f, 1f);
+        if (alljoueurselect)
+        {
+            StartCoroutine(changePlace());
+            InvokeRepeating("requette", 0f, 1f);
+        }
+        else
+        {
+            InvokeRepeating("checkallselect", 0f, 1f);
+        }
+       
 
         
         
@@ -334,5 +343,24 @@ public class User2main : MonoBehaviour
             }
         }
         
+    }
+
+    private void checkallselect()
+    {
+        Boolean test = false;
+        int count = 0;
+        for (int i = 0; i < Main.Global.Nbjoueur; i++)
+        {
+            count = count + Main.Global.tabPlayer[i].IsSelect;
+        }
+
+        if (count == Main.Global.Nbjoueur)
+        {
+            alljoueurselect = true;
+        }
+        else
+        {
+            count = 0;
+        }
     }
 }
