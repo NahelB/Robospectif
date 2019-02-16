@@ -1,30 +1,29 @@
 ﻿using System;
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class ChangeImageEqui : MonoBehaviour, IPointerClickHandler
+public class ChangeImageDi : MonoBehaviour, IPointerClickHandler
 {
-    // Start is called before the first frame update
-    public bool[] selection;
     public Image image;
-    public Main.Image[] equi;
+    public Main.Image[] dim;
     private int indice;
     private Main.Player p;
-
+    
     // Start is called before the first frame update
     void Start()
-
+    
     {
-        equi = MainScript.equipements;
-        selection = Equipement.selection;
+        dim = MainScript.dimensions;
         indice = 0;
     }
-
+    
     public void OnPointerClick(PointerEventData eventData)
     {
-        image.sprite = equi[Equipement.TraiteIndice()].Sprite;
+        indice = (indice + 1) % 3;
+        image.sprite = dim[indice].Sprite;
     }
 }

@@ -14,7 +14,7 @@ public class selectUser : MonoBehaviour
     void Start()
     {
         //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
-        InvokeRepeating("requette", 3f, 1f);
+        InvokeRepeating("requette", 1f, 1f);
 
     }    
     
@@ -24,7 +24,7 @@ public class selectUser : MonoBehaviour
         Main.Global.Player=SelectNmbPlayer.getPlayer(i);
         
         Debug.Log(Main.Global.Player.ToString());
-        StartCoroutine(selectPlayer(i));
+        //StartCoroutine(selectPlayer(i));
         SceneManager.LoadScene(scene.handle);
     }
 
