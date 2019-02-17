@@ -18,6 +18,9 @@ public class Text_Connexion : MonoBehaviour
     private int numJoueur;      // Pour affecter un numero de joueur (1 - 6)
     private Text affichageJoueur;   // Pour convertir de GameObjecte à Text
     private GameObject[] tabText = new GameObject[6];   //Tableau qui contient tout les GameObject "text_Position"
+    private int[] tabNum ;   //Tableau qui contient tout la position et le numero de joueurs 
+
+        // Recuperation scene d'avant
     private int nbJoueur ;  // Le nombre de joueur dans la partie (de 4 à 6)
     private int[] tabPosition = new int[6]; // Position des joueurs qui sont choisi
 
@@ -27,10 +30,14 @@ public class Text_Connexion : MonoBehaviour
     void Start()
     {
         // Recuperation du Nombre de joueur:
-        //nbJoueur = PlayerPrefs.GetInt("monNbJoueur");
+        //nbJoueur = PlayerPrefs.GetInt("monNbJoueur");     // Nombre de Joueurs
         nbJoueur = 4; // Nombre de Joueurs
 
         // Recuperation de la position des joueurs:
+        /*for (int i = 0; i <= 5; i++)
+        {
+            tabPosition[i] = PlayerPrefs.GetInt("maPosition" + (i+1) );     // Position des joueurs
+        }*/
         tabPosition = new int[]  { 1, 3, 4, 5, 0, 0 }; // Position des joueurs
 
 
@@ -53,25 +60,30 @@ public class Text_Connexion : MonoBehaviour
     // Méthode Affichage de connexion par joueurs
     void EstConnecter()
     {
-        // Passage de GameObjecte a text
-        //Text text_1 = text_Position_1.GetComponent<Text>();
-        /*Text text_2 = text_Position_2.GetComponent<Text>();
-        Text text_3 = text_Position_3.GetComponent<Text>();
-        Text text_4 = text_Position_4.GetComponent<Text>();
-        Text text_5 = text_Position_5.GetComponent<Text>();
-        Text text_6 = text_Position_6.GetComponent<Text>();*/
 
 
-        
+        // Verification des Connection
 
-        // Si jo
-        //text_1.text = "Coucou" + "\n" +  "cc";
-
-
-        affichageJoueur = tabText[0].GetComponent<Text>();
-        affichageJoueur.text = " Joueur " + 1 + "\n" + " Pas Connecté ";
+        // Si le Joueurs est connecté
 
 
+        // Boucle FOR qui peut parcourir les 6 joueurs
+        for (int i = 1; i <= 6; i++)
+        {
+            numJoueur = 1;  // Compteur pour affecter le bon numero de joueur
+
+            // Boucle IF qui Affiche le Text seulement pour les joueurs
+            if (EstDedans(i, tabPosition) /*&& estConnecter*/) //Si il fait partie du Tableau (Joueurs choisi)
+            {
+                affichageJoueur = tabText[i - 1].GetComponent<Text>();
+                affichageJoueur.color = Color.white; //Couleur de tout le texte 
+                affichageJoueur.text = "Joueur " + numJoueur + "\n" + "<color=blue> Connecté </color>";
+
+
+                numJoueur++;    //Incrementation du numero de Joueur
+            }
+
+        }
     }
 
 
