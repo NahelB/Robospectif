@@ -20,11 +20,21 @@ public class ChangeImageEqui : MonoBehaviour, IPointerClickHandler
     {
         equi = MainScript.equipements;
         selection = Equipement.selection;
-        indice = 0;
+        if (image.name == "ImageEquipement1")
+        {
+            indice = 0;
+        } else if (image.name == "ImageEquipement2")
+        {
+            indice = 1;
+        } else if (image.name == "ImageEquipement3")
+        {
+            indice = 2;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        image.sprite = equi[Equipement.TraiteIndice()].Sprite;
+        indice = Equipement.TraiteIndice(indice);
+        image.sprite = equi[indice].Sprite;
     }
 }
