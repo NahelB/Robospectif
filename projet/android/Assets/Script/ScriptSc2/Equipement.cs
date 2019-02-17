@@ -23,7 +23,7 @@ public class Equipement : MonoBehaviour
         selection[3] = false;
         selection[4] = false;
         selection[5] = false;
-        indice = 3;
+        indice = 0;
     }
 
     // Update is called once per frame
@@ -32,8 +32,9 @@ public class Equipement : MonoBehaviour
         
     }
 
-    public static int TraiteIndice()
+    public static int TraiteIndice(int i)
     {
+        indice = i;
         selection[indice] = false;
         bool ok = false;
         while (!ok)
