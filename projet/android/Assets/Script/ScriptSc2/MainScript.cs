@@ -90,9 +90,9 @@ public class MainScript : MonoBehaviour
 
     private void RandomDim()
     {
-        int x=0, y=0, z=0;
+        int x = 0, y = 0, z = 0;
         Main.TabImage tab = Main.Global.TabD;
-        while ( tab.getImageind(x).Sprite.Equals(tab.getImageind(y).Sprite) || tab.getImageind(x).Sprite.Equals(tab.getImageind(z).Sprite) || tab.getImageind(z).Sprite.Equals(tab.getImageind(y).Sprite))
+        while (tab.getImageind(x).Sprite.Equals(tab.getImageind(y).Sprite) || tab.getImageind(x).Sprite.Equals(tab.getImageind(z).Sprite) || tab.getImageind(z).Sprite.Equals(tab.getImageind(y).Sprite))
         {
             x = Random.Range(0, tab.Taille);
             y = Random.Range(0, tab.Taille);
@@ -105,7 +105,7 @@ public class MainScript : MonoBehaviour
         Main.Global.TabD.removeImage(dimensions[0]);
         Main.Global.TabD.removeImage(dimensions[1]);
         Main.Global.TabD.removeImage(dimensions[2]);
-        
+
         dimensionGO1.sprite = dimensions[0].Sprite;
     }
 
@@ -134,6 +134,6 @@ public class MainScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

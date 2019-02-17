@@ -12,15 +12,15 @@ public class ChangeImageDi : MonoBehaviour, IPointerClickHandler
     public Main.Image[] dim;
     private int indice;
     private Main.Player p;
-    
+
     // Start is called before the first frame update
     void Start()
-    
+
     {
         dim = MainScript.dimensions;
         indice = 0;
     }
-    
+
     public void OnPointerClick(PointerEventData eventData)
     {
         indice = (indice + 1) % 3;

@@ -23,7 +23,7 @@ public class ChangeImageLoco : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        indice = (indice + 1)%3;
+        indice = (indice + 1) % 3;
         image.sprite = loco[indice].Sprite;
     }
 }

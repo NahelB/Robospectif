@@ -29,7 +29,7 @@ public class Equipement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public static int TraiteIndice(int i)

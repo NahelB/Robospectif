@@ -23,10 +23,12 @@ public class ChangeImageEqui : MonoBehaviour, IPointerClickHandler
         if (image.name == "ImageEquipement1")
         {
             indice = 0;
-        } else if (image.name == "ImageEquipement2")
+        }
+        else if (image.name == "ImageEquipement2")
         {
             indice = 1;
-        } else if (image.name == "ImageEquipement3")
+        }
+        else if (image.name == "ImageEquipement3")
         {
             indice = 2;
         }
