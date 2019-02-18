@@ -8,6 +8,8 @@ public class TitreConnextion : MonoBehaviour
     // ---------- ATRIBUES ----------
     public GameObject titreScene;
 
+
+    private int estConnecter;
     // ---------- METHODES ----------
 
     // Methode d'inisialisation
@@ -21,7 +23,15 @@ public class TitreConnextion : MonoBehaviour
     // Méthode de Mise A Jour
     void Update()
     {
-        
+        estConnecter = PlayerPrefs.GetInt("TousConnecter");
+
+        //Boucle IF qui change le texte si tout les joueurs sont connectés
+        if (estConnecter == 1)
+        {
+            Text textTitre = titreScene.GetComponent<Text>();
+            textTitre.color = Color.white; //Couleur de tout le texte 
+            textTitre.text = "Tous les joueurs sont " + "\n" + " connectés à la table ! ";
+        }
     }
 
     // Méthode de clik sourie pour faire touner le Titre
@@ -29,4 +39,5 @@ public class TitreConnextion : MonoBehaviour
     {
         transform.Rotate(Vector3.back, -90);
     }
+
 }
