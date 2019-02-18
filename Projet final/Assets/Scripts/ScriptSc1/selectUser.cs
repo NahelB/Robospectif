@@ -23,6 +23,7 @@ public class selectUser : MonoBehaviour
         //Output this to console when the Button3 is clicked
         Main.Global.Player=SelectNmbPlayer.getPlayer(i);
         Debug.Log(Main.Global.Player.ToString());
+        PlayerPrefs.SetInt("idplayer", Main.Global.Player.Id);
         //StartCoroutine(selectPlayer(i));
         SceneManager.LoadScene("scene2");
     }
