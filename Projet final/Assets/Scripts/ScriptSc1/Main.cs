@@ -179,15 +179,17 @@ public class Main : MonoBehaviour
             tabPlayer = new Main.Player[7];
             nbjoueur = 0;
         }
-
-        public static Player[] GetPlayer()
+        
+        public static Player[] TabPlayer
         {
-            return tabPlayer;
+            get => tabPlayer;
+            set => tabPlayer = value;
         }
 
-        public static int Getnbjoueur()
+        public static int Nbjoueur
         {
-            return nbjoueur;
+            get => nbjoueur;
+            set => nbjoueur = value;
         }
 
         public void SetPlayer(Player[] p)
@@ -199,13 +201,17 @@ public class Main : MonoBehaviour
         {
             nbjoueur = i;
         }
-
+        public static void addPlayer(Player p)
+        {
+            tabPlayer[nbjoueur] = p;
+            nbjoueur++;
+        }
         public static string ToString()
         {
             string res = "";
             for (int i = 1; i < 7; i++)
             {
-                res = res + GetPlayer()[i].ToString() + " ; ";
+                res = res + TabPlayer[i].ToString() + " ; ";
             }
 
             return res;

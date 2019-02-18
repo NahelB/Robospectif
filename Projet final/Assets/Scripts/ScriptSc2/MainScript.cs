@@ -114,6 +114,7 @@ public class MainScript : MonoBehaviour
     void Start()
     {
         player = Main.Global.Player;
+        Main.Global.addPlayer(player);
         Debug.Log(Main.Global.Player.ToString());
       
         //        Debug.Log(player.ToString());
