@@ -26,13 +26,21 @@ public class SansHUD : NetworkManager
         }
         else 
         {
+            
             manager.StartClient(); // Connection Smartphone
             Debug.Log("Client connecté");
             SceneManager.LoadScene("scene1");
+            int id = PlayerPrefs.GetInt("idplayer");
         }
         
+        
     }
-
+    
+    void SendValue(int value){
+        var msg = new IntegerMessage(value);
+        NetworkServer.SendToAll(MsgType.Scene, msg);
+    }
+    
    
 
     ////////////////////       Partie Network     ///////////////////////////////////////

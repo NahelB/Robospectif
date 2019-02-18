@@ -115,8 +115,9 @@ public class MainScript : MonoBehaviour
     {
         player = Main.Global.Player;
         Main.Global.addPlayer(player);
+
         Debug.Log(Main.Global.Player.ToString());
-      
+        
         //        Debug.Log(player.ToString());
         Main.TabImage tab = Main.Global.TabD;
         text.text = "Joueur :" + player.Id;
