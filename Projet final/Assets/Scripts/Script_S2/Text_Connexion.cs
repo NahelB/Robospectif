@@ -22,7 +22,7 @@ public class Text_Connexion : MonoBehaviour
     private int tousConnecter;
 
         // Recuperation scene d'avant
-    private int nbJoueur ;  // Le nombre de joueur dans la partie (de 4 à 6)
+    public int nbJoueur ;  // Le nombre de joueur dans la partie (de 4 à 6)
     private int[] tabPosition = new int[6]; // Position des joueurs qui sont choisi
 
     // ---------- METHODES ----------
@@ -31,15 +31,15 @@ public class Text_Connexion : MonoBehaviour
     void Start()
     {
         // Recuperation du Nombre de joueur:
-        //nbJoueur = PlayerPrefs.GetInt("monNbJoueur");     // Nombre de Joueurs
-        nbJoueur = 6; // Nombre de Joueurs
+        nbJoueur = PlayerPrefs.GetInt("nombreJoueur");     // Nombre de Joueurs
+        //nbJoueur = 6; // Nombre de Joueurs
 
         // Recuperation de la position des joueurs:
-        /*for (int i = 0; i <= 5; i++)
+        for (int i = 0; i <= 5; i++)
         {
-            tabPosition[i] = PlayerPrefs.GetInt("maPosition" + (i+1) );     // Position des joueurs
-        }*/
-        tabPosition = new int[]  { 1, 2, 3, 4, 5, 6 }; // Position des joueurs
+            tabPosition[i] = PlayerPrefs.GetInt("P" + (i+1) );     // Position des joueurs
+        }
+        //tabPosition = new int[]  { 1, 2, 3, 4, 5, 6 }; // Position des joueurs
 
 
 
@@ -155,10 +155,10 @@ public class Text_Connexion : MonoBehaviour
 
 
         //Verifie si le joueur c'est conecté
-        if (joueur == 1 || joueur == 4 )
+        /*if (joueur == 1 || joueur == 4 )
         {
             Connecter = true;
-        }
+        }*/
 
         return Connecter;
     }

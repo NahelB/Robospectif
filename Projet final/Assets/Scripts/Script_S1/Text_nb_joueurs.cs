@@ -64,6 +64,8 @@ public class Text_nb_joueurs : MonoBehaviour
 
         Text nb_joueurs_text = text_nb_joueurs.GetComponent<Text>();
         nb_joueurs_text.text = "Il y a " + nb_joueurs + " joueurs enregistrés.";
+
+        PlayerPrefs.SetInt("nbJoueur", nb_joueurs);    //Envoie le nombre de Joueur
     }
 
 

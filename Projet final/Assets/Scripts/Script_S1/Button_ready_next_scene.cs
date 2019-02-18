@@ -24,11 +24,14 @@ public class Button_ready_next_scene : MonoBehaviour
     void OnMouseDown()
     {
         // ----- PARTIE NATHAN -----
-        // Initialise les envoies de position
+        // Envoies des positions
         for (int i = 1; i <= 6; i++)
         {
-            //PlayerPrefs.SetInt("P" + i, 0);    //Affecte les positions a '0' par défaut
+            PlayerPrefs.SetInt("P" + i, PlayerPrefs.GetInt("LaPosition" + i));    
         }
+        // Envoies le nombre de joueur
+        PlayerPrefs.SetInt("nombreJoueur", PlayerPrefs.GetInt("nbJoueur"));
+
         // --------------------------
 
         Debug.Log("Click");
