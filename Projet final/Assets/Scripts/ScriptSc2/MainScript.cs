@@ -114,9 +114,11 @@ public class MainScript : MonoBehaviour
     void Start()
     {
         player = Main.Global.Player;
+        Debug.Log(Main.Global.Player.ToString());
+      
         //        Debug.Log(player.ToString());
         Main.TabImage tab = Main.Global.TabD;
-        //text.text = "Le player selectionné est :" + player.Id;
+        text.text = "Joueur :" + player.Id;
         RandomDim();
 
         locomotions = new Main.Image[3];

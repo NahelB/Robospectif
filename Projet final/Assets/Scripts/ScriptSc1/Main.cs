@@ -167,7 +167,8 @@ public class Main : MonoBehaviour
         private static TabImage tabL;
         private static TabImage tabD;
         private static TabImage tabE;
-
+        public static Player[] tabPlayer;
+        private static int nbjoueur;
 
         public Global()
         {
@@ -175,6 +176,39 @@ public class Main : MonoBehaviour
             tabL = new TabImage();
             tabD = new TabImage();
             tabE = new TabImage();
+            tabPlayer = new Main.Player[7];
+            nbjoueur = 0;
+        }
+
+        public static Player[] GetPlayer()
+        {
+            return tabPlayer;
+        }
+
+        public static int Getnbjoueur()
+        {
+            return nbjoueur;
+        }
+
+        public void SetPlayer(Player[] p)
+        {
+            tabPlayer = p;
+        }
+
+        public static void Setnbjoueur(int i)
+        {
+            nbjoueur = i;
+        }
+
+        public static string ToString()
+        {
+            string res = "";
+            for (int i = 1; i < 7; i++)
+            {
+                res = res + GetPlayer()[i].ToString() + " ; ";
+            }
+
+            return res;
         }
 
         public static Player Player
