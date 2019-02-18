@@ -27,6 +27,7 @@ public class SansHUD : NetworkManager
             Debug.Log(id);
         }
         else 
+        
         {
             
             manager.StartClient(); // Connection Smartphone
