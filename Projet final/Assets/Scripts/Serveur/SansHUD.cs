@@ -23,21 +23,35 @@ public class SansHUD : NetworkManager
             manager.StartServer(); // Connection Serveur
             Debug.Log("Serveur connecté");
             // SceneManager.LoadScene("Scene_2");
+            int id = PlayerPrefs.GetInt("idplayer");
+            Debug.Log(id);
         }
         else 
         {
+            
             manager.StartClient(); // Connection Smartphone
             Debug.Log("Client connecté");
             SceneManager.LoadScene("scene1");
         }
         
+        
     }
+<<<<<<< HEAD
 
     void Update()
     {
         
     }
 
+=======
+    
+    void SendValue(int value){
+        var msg = new IntegerMessage(value);
+        NetworkServer.SendToAll(MsgType.Scene, msg);
+    }
+    
+   
+>>>>>>> b1dde3a470401565f325da6a950d8008bedd896d
 
     ////////////////////       Partie Network     ///////////////////////////////////////
 
