@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Text_Connexion : MonoBehaviour
@@ -137,11 +138,16 @@ public class Text_Connexion : MonoBehaviour
 
         }
 
+        PlayerPrefs.SetInt("TousConnecter", 0);
+
         if (tousConnecter == nbJoueur)
         {
             // Changer Titre
+            PlayerPrefs.SetInt("TousConnecter", 1);
             // Mettre du temps
-            //Changer de scene
+            System.Threading.Thread.Sleep(10000);
+            // Changer de scene (Suivante)
+            SceneManager.LoadScene("Scene_3");
         }
     }
 

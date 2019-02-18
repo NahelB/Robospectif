@@ -18,7 +18,7 @@ public class SansHUD : NetworkManager
         
         string ipv4 = IPManager.GetIP(IPManager.ADDRESSFAM.IPv4); // On met l'adresse IP de l'appareil courant dans ipv4
         Debug.Log(ipv4);
-        if(ipv4 == "192.168.43.40") 
+        if(ipv4 == "192.168.43.98") // IP Table 192.168.43.40
         {
             manager.StartServer(); // Connection Serveur
             Debug.Log("Serveur connecté");
@@ -37,6 +37,14 @@ public class SansHUD : NetworkManager
         
         
     }
+<<<<<<< HEAD
+
+    void Update()
+    {
+        
+    }
+
+=======
     
     void SendValue(int value){
         var msg = new IntegerMessage(value);
@@ -44,6 +52,7 @@ public class SansHUD : NetworkManager
     }
     
    
+>>>>>>> b1dde3a470401565f325da6a950d8008bedd896d
 
     ////////////////////       Partie Network     ///////////////////////////////////////
 
