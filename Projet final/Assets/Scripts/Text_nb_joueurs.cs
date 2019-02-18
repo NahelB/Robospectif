@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Text_nb_joueurs : MonoBehaviour
 {
-    public int nb_joueurs = 0;
+    public static int nb_joueurs = 0;
     public GameObject text_nb_joueurs;
 
     // Start is called before the first frame update
