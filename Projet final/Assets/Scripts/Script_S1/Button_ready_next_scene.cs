@@ -23,8 +23,16 @@ public class Button_ready_next_scene : MonoBehaviour
   
     void OnMouseDown()
     {
+        // ----- PARTIE NATHAN -----
+        // Initialise les envoies de position
+        for (int i = 1; i <= 6; i++)
+        {
+            //PlayerPrefs.SetInt("P" + i, 0);    //Affecte les positions a '0' par défaut
+        }
+        // --------------------------
+
         Debug.Log("Click");
-        SceneManager.LoadScene("scene_2");
+        SceneManager.LoadScene("Scene_2");
     }
     
 }
