@@ -18,17 +18,17 @@ public class SansHUD : NetworkManager
         
         string ipv4 = IPManager.GetIP(IPManager.ADDRESSFAM.IPv4); // On met l'adresse IP de l'appareil courant dans ipv4
         Debug.Log(ipv4);
-        if(ipv4 == "192.168.43.40") 
+        if(ipv4 == "192.168.137.1") 
         {
             manager.StartServer(); // Connection Serveur
             Debug.Log("Serveur connecté");
-            SceneManager.LoadScene("Scène2");
+            SceneManager.LoadScene("Scene_2");
         }
         else 
         {
             manager.StartClient(); // Connection Smartphone
             Debug.Log("Client connecté");
-            SceneManager.LoadScene("ScènePortable1");
+            SceneManager.LoadScene("scene1");
         }
         
     }

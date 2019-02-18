@@ -9,9 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/1ere scene jeu.unity
     guid: 5f565cb3d9f1f1d4e8ec571572a427bf
   - enabled: 0
-    path: Assets/Scenes/scene_2.unity
+    path: 
     guid: 164afffd23a9b684f9b8386f0b6be997
   - enabled: 1
     path: Assets/Scenes/2_PartieConnexion/Scene_2.unity
     guid: 4792a84215b1ea54ba93e79fcecd7f9a
+  - enabled: 1
+    path: Assets/Scenes/scene1.unity
+    guid: d818dcf75dfe7514f94631ea57894092
+  - enabled: 1
+    path: Assets/Scenes/scene2.unity
+    guid: 3f0bf28b229f9b94e8df265058291484
+  - enabled: 1
+    path: Assets/Scenes/scene3.unity
+    guid: e79fe322cb4f2bd4884d244850532871
   m_configObjects: {}
