@@ -23,6 +23,8 @@ public class SansHUD : NetworkManager
             manager.StartServer(); // Connection Serveur
             Debug.Log("Serveur connecté");
             // SceneManager.LoadScene("Scene_2");
+            int id = PlayerPrefs.GetInt("idplayer");
+            Debug.Log(id);
         }
         else 
         {
@@ -30,7 +32,6 @@ public class SansHUD : NetworkManager
             manager.StartClient(); // Connection Smartphone
             Debug.Log("Client connecté");
             SceneManager.LoadScene("scene1");
-            int id = PlayerPrefs.GetInt("idplayer");
         }
         
         
