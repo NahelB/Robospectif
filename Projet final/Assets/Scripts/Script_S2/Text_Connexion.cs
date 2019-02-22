@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Text_Connexion : MonoBehaviour
 {
-    // ---------- ATRIBUES ----------
+    // ---------- ATTRIBUETS ----------
 
     public GameObject text_Position_1;      // Texte a la 1er position (En Bas a Gauche)
     public GameObject text_Position_2;      // Texte a la 2eme position (En Bas a Droite)
@@ -15,22 +15,27 @@ public class Text_Connexion : MonoBehaviour
     public GameObject text_Position_5;      // Texte a la 5eme position (En Haut a Gauche)
     public GameObject text_Position_6;      // Texte a la 6eem position (A Gauche)
 
-    // ---------- ATRIBUES ----------
+    // ---------- CONSTANTES ----------
     private int numJoueur;      // Pour affecter un numero de joueur (1 - 6)
     private Text affichageJoueur;   // Pour convertir de GameObjecte à Text
     private GameObject[] tabText = new GameObject[6];   //Tableau qui contient tout les GameObject "text_Position"
     public int[] tabNum ;   //Tableau qui contient tout la position et le numero de joueurs 
     private int tousConnecter;
+    private int infoAndroid;
+
 
         // Recuperation scene d'avant
     public int nbJoueur ;  // Le nombre de joueur dans la partie (de 4 à 6)
     private int[] tabPosition = new int[6]; // Position des joueurs qui sont choisi
+    private static bool estDebut;
 
     // ---------- METHODES ----------
 
     // Methode d'inisialisation
     void Start()
     {
+        infoAndroid = 0;
+        estDebut = false;
         // Recuperation du Nombre de joueur:
         nbJoueur = PlayerPrefs.GetInt("nombreJoueur");     // Nombre de Joueurs
         //nbJoueur = 6; // Nombre de Joueurs
@@ -115,18 +120,33 @@ public class Text_Connexion : MonoBehaviour
 
     // -------------------------------------------------------------------------------------
 
+    // Méthode qui recupere l'entier de Joueur (Android)
+    public static void recupInfoJoueur(int i)
+    {
+        PlayerPrefs.SetInt("monInfoJoueur", i);
+        estDebut = true;
+    }
+
+
     // Méthode Affichage de connexion par joueurs
     void AfficheJoueurConnecter()
     {
         tousConnecter = 0; //Initialise la variable a 0
 
+        //Recuperer les infos sur la connection du joueurs
+
+        if (estDebut)
+        {
+            infoAndroid = PlayerPrefs.GetInt("monInfoJoueur");
+        }
+        
 
         // Boucle FOR qui peut parcourir le tableau  "tabNum" (position/numero de joueurs) 
         for (int i = 0; i <= (2 * nbJoueur)-1; i = i + 2)
         {
 
             // Boucle IF qui verifie si le Joueurs est connecté
-            if (estConnecte(tabNum[i]))
+            if (estConnecte(tabNum[i], infoAndroid))
             {
                 //Modifie le text
                 affichageJoueur = tabText[tabNum[i] - 1].GetComponent<Text>();
@@ -153,18 +173,16 @@ public class Text_Connexion : MonoBehaviour
 
 
     // Méthode qui revoie Vrai si un joueur (int) est Connecté
-    private bool estConnecte(int joueur)
+    private bool estConnecte(int joueur, int JAndroid)
     {
         bool Connecter = false; //variable qui est Vrai si le joueur est connecté
 
-        //Recuperer les infos sur la connection du joueurs
-
 
         //Verifie si le joueur c'est conecté
-        /*if (joueur == 1 || joueur == 4 )
+        if (joueur == JAndroid)
         {
             Connecter = true;
-        }*/
+        }
 
         return Connecter;
     }

@@ -16,18 +16,18 @@ public class Button_Ready_affichage : MonoBehaviour
     void affichageButtonReady()
     {
 
-        Debug.Log("Combien de joueurs : " + Text_nb_joueurs.nb_joueurs);
+        // Debug.Log("Combien de joueurs : " + Text_nb_joueurs.nb_joueurs);
 
         if (Text_nb_joueurs.nb_joueurs >= 4)
         {
         
             ready.SetActive(true);
-            Debug.Log("true");
+            // Debug.Log("true");
         }
         else
         {
             ready.SetActive(false);
-            Debug.Log("false");
+            // Debug.Log("false");
         }
     }
 

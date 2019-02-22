@@ -34,7 +34,7 @@ public class Button_ready_next_scene : MonoBehaviour
 
         // --------------------------
 
-        Debug.Log("Click");
+        // Debug.Log("Click");
         SceneManager.LoadScene("Scene_2");
     }
     
