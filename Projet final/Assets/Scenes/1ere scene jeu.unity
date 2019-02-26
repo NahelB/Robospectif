@@ -704,19 +704,24 @@ MonoBehaviour:
   m_NetworkPort: 7777
   m_ServerBindToIP: 0
   m_ServerBindAddress: 
-  m_NetworkAddress: 192.168.43.98
+<<<<<<< HEAD
+  m_NetworkAddress: 192.168.1.49
+=======
+  m_NetworkAddress: 192.168.43.40
+>>>>>>> b755aa5d17e58965f039f0ab582e784e88a3943b
   m_DontDestroyOnLoad: 1
   m_RunInBackground: 1
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 0}
+  m_PlayerPrefab: {fileID: 8127940753696339887, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+    type: 3}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 0
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs: []
-  m_CustomConfig: 0
+  m_CustomConfig: 1
   m_MaxConnections: 6
   m_ConnectionConfig:
     m_PacketSize: 1440
@@ -760,7 +765,7 @@ MonoBehaviour:
     m_MaxNetSimulatorTimeout: 12000
   m_Channels: 0500000000000000
   m_UseWebSockets: 0
-  m_UseSimulator: 0
+  m_UseSimulator: 1
   m_SimulatedLatency: 1
   m_PacketLossPercentage: 0
   m_MaxBufferedPackets: 16
@@ -776,6 +781,7 @@ MonoBehaviour:
     m_Handle: 0
   sceneClient:
     m_Handle: 0
+  conText: {fileID: 0}
 --- !u!114 &903383416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,3 +1754,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ca117f4fc75dba49b53f9243c84c593, type: 3}
+--- !u!1001 &1908438356166608712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8127940753696339887, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_Name
+      value: GameObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 799.75543
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 561.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -358.42712
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4938551664683974752, guid: 2f1ac20acee795b449d84c9bc63ad48f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2f1ac20acee795b449d84c9bc63ad48f, type: 3}

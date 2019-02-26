@@ -22,7 +22,7 @@ public class Joueur_6_ready : MonoBehaviour
 
         if (this.gameObject.name == "Main_beige_6")
         {
-            Debug.Log("clic sur " + this.gameObject.name);
+            // Debug.Log("clic sur " + this.gameObject.name);
             if (joueur_6 == false)
             {
                 rend.sprite = Main_verte_6;

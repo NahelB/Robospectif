@@ -21,7 +21,7 @@ public class Joueur_5_ready : MonoBehaviour
 
         if (this.gameObject.name == "Main_beige_5")
         {
-            Debug.Log("clic sur " + this.gameObject.name);
+            // Debug.Log("clic sur " + this.gameObject.name);
             if (joueur_5 == false)
             {
                 rend.sprite = Main_verte_5;

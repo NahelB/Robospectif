@@ -26,6 +26,16 @@ public class Main : MonoBehaviour
             this.isOk = isOk;
         }
 
+        public Player(int id)
+        {
+            this.id = id;
+            this.isSelect = 1;
+            this.idcarte1 = 0;
+            this.idcarte2 = 0;
+            this.idcarte3 = 0;
+            this.isOk = 0;
+        }
+
         public Player()
         {
             this.id = 0;

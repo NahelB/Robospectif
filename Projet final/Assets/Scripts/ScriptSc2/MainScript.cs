@@ -2,10 +2,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using UnityEngine.Networking;
 
 public class MainScript : MonoBehaviour
 {
-    public Main.Player player;
+    public static Main.Player player;
     public Text text;
     public Image dimensionGO1;
     public Image dimensionGO2;
@@ -118,9 +119,9 @@ public class MainScript : MonoBehaviour
 
         Debug.Log(Main.Global.Player.ToString());
         
-        //        Debug.Log(player.ToString());
+       
         Main.TabImage tab = Main.Global.TabD;
-        text.text = "Joueur :" + player.Id;
+        text.text = "Joueur : " + player.Id;
         RandomDim();
 
         locomotions = new Main.Image[3];
@@ -128,6 +129,8 @@ public class MainScript : MonoBehaviour
 
         RandomEqui();
     }
+
+
 
     public static Main.Image[] getLoco()
     {

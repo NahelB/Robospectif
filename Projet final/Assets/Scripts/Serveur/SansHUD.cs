@@ -6,63 +6,120 @@ using UnityEngine.Networking.NetworkSystem;
 using UnityEngine.Networking.Match;
 using UnityEngine.SceneManagement;
 
+class RegisterHostMessage : MessageBase { public float message; }
 
 public class SansHUD : NetworkManager
 {
     public NetworkManager manager;
     public Scene sceneServeur;
     public Scene sceneClient;
+    public NetworkClient myclient;
+    short messageID = 1000;
+    public UnityEngine.UI.Text conText;
+    public static short clientID = 123;
+    public NetworkConnection id;
+
 
     void Start()
     {
-        
+        Debug.Log("Serveur connecté");
         string ipv4 = IPManager.GetIP(IPManager.ADDRESSFAM.IPv4); // On met l'adresse IP de l'appareil courant dans ipv4
         Debug.Log(ipv4);
-        if(ipv4 == "192.168.43.98") // IP Table 192.168.43.40
+<<<<<<< HEAD
+        if(ipv4 == "192.168.1.49") // IP Table 192.168.43.40
+=======
+        if(ipv4 == "192.168.43.40") // IP Table 192.168.43.40    192.168.1.10
+>>>>>>> b755aa5d17e58965f039f0ab582e784e88a3943b
         {
             manager.StartServer(); // Connection Serveur
+            RegisterHandlers();
             Debug.Log("Serveur connecté");
-            // SceneManager.LoadScene("Scene_2");
-            int id = PlayerPrefs.GetInt("idplayer");
-            Debug.Log(id);
         }
         else 
-        
         {
-            
             manager.StartClient(); // Connection Smartphone
             Debug.Log("Client connecté");
             SceneManager.LoadScene("scene1");
-        }
-        
-        
+        } 
+    }
+
+
+    private void RegisterHandlers()
+    {
+        NetworkServer.RegisterHandler(MsgType.Connect, OnClientConnected);
+        NetworkServer.RegisterHandler(messageID, OnMessageReceived);
     }
 <<<<<<< HEAD
 
-    void Update()
+=======
+>>>>>>> b755aa5d17e58965f039f0ab582e784e88a3943b
+
+
+    void OnMessageReceived(NetworkMessage message)
     {
+        
+        int id = message.ReadMessage<MyNetworkMessage>().message;
+        Debug.Log("id_serveur : " + id);
+        Text_Connexion.recupInfoJoueur(id);
+
         
     }
 
-=======
-    
+<<<<<<< HEAD
+
     void SendValue(int value){
         var msg = new IntegerMessage(value);
         NetworkServer.SendToAll(MsgType.Scene, msg);
     }
     
    
->>>>>>> b1dde3a470401565f325da6a950d8008bedd896d
+=======
+ 
+
+
+    public void OnCommandSent(NetworkMessage netMsg)
+    {
+        Debug.Log(netMsg);
+    }
+>>>>>>> b755aa5d17e58965f039f0ab582e784e88a3943b
+
 
     ////////////////////       Partie Network     ///////////////////////////////////////
 
 
     public override void OnServerConnect(NetworkConnection conn)
     {
+        NetworkServer.RegisterHandler(MsgType.Connect, OnClientConnected);
+    }
 
-        Debug.Log("A client connected to the server: " + conn);
+    
+   void OnClientConnected(NetworkMessage message)
+    {
+  
+    }
+    
+
+    public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
+    {
+        
+        var player = (GameObject)GameObject.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+
+        NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+        
+
+        Debug.Log("Client has requested to get his player added to the game");
 
     }
+
+
+
+
+
+
+
+
+
+
 
     public override void OnServerDisconnect(NetworkConnection conn)
     {
@@ -89,16 +146,8 @@ public class SansHUD : NetworkManager
 
     }
 
-    public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
-    {
 
-        var player = (GameObject)GameObject.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
-
-        NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
-
-        Debug.Log("Client has requested to get his player added to the game");
-
-    }
+    
 
     public override void OnServerAddPlayer(NetworkConnection conn, short playerControllerId, NetworkReader extraMessageReader)
     {
