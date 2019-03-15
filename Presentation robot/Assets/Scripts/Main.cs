@@ -248,7 +248,9 @@ public class Main : MonoBehaviour
             set => tabE = value;
         }
 
+#pragma warning disable CS0114 // Un membre masque un membre hérité ; le mot clé override est manquant
         public static string ToString()
+#pragma warning restore CS0114 // Un membre masque un membre hérité ; le mot clé override est manquant
         {
             string res = "";
             for (int i = 1; i < 7; i++)
