@@ -74,6 +74,6 @@ public class Nb_carte_position : MonoBehaviour
         }
         
         
-        Debug.Log(nb_carte_position_1);
+       // Debug.Log(nb_carte_position_1);
     }
 }

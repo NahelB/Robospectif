@@ -269,7 +269,7 @@ public class Main : MonoBehaviour
     {
 
         Global g = new Global();
-        g.SetPlayer( new Player(1, 1, 1, 1, 1, 2, 3));
+        g.SetPlayer( new Player(1, 4, 8, 8, 7, 2, 8));
 
         initializeLoco();
         initializeDi();

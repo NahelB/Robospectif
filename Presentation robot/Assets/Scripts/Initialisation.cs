@@ -49,12 +49,60 @@ public class Initialisation : MonoBehaviour
     {
 
         //Player p = Global.Player;
-        J1carte1.GetComponent<SpriteRenderer>().sprite = Global.TabD.getImageind(Global.Player.Idcarte4).Sprite;
-        J1carte2.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte3).Sprite;
-        J1carte3.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte4).Sprite;
-        J1carte4.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte5).Sprite;
-        J1carte5.GetComponent<SpriteRenderer>().sprite = Global.TabL.getImageind(Global.Player.Idcarte1).Sprite;
+        
+        switch (Global.Player.Place)
+        {
+            case 1:
+                J1carte1.GetComponent<SpriteRenderer>().sprite = Global.TabD.getImageind(Global.Player.Idcarte2).Sprite;
+                J1carte2.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte3).Sprite;
+                J1carte3.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte4).Sprite;
+                J1carte4.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte5).Sprite;
+                J1carte5.GetComponent<SpriteRenderer>().sprite = Global.TabL.getImageind(Global.Player.Idcarte1).Sprite;
+             break;
+            
+            case 2:
+                J2carte1.GetComponent<SpriteRenderer>().sprite = Global.TabD.getImageind(Global.Player.Idcarte2).Sprite;
+                J2carte2.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte3).Sprite;
+                J2carte3.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte4).Sprite;
+                J2carte4.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte5).Sprite;
+                J2carte5.GetComponent<SpriteRenderer>().sprite = Global.TabL.getImageind(Global.Player.Idcarte1).Sprite;
+                break;
+            
+            case 3:
+                J3carte1.GetComponent<SpriteRenderer>().sprite = Global.TabD.getImageind(Global.Player.Idcarte2).Sprite;
+                J3carte2.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte3).Sprite;
+                J3carte3.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte4).Sprite;
+                J3carte4.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte5).Sprite;
+                J3carte5.GetComponent<SpriteRenderer>().sprite = Global.TabL.getImageind(Global.Player.Idcarte1).Sprite;
+                break;
+            
+            case 4:
+                J4carte1.GetComponent<SpriteRenderer>().sprite = Global.TabD.getImageind(Global.Player.Idcarte2).Sprite;
+                J4carte2.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte3).Sprite;
+                J4carte3.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte4).Sprite;
+                J4carte4.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte5).Sprite;
+                J4carte5.GetComponent<SpriteRenderer>().sprite = Global.TabL.getImageind(Global.Player.Idcarte1).Sprite;
 
+                break;
+            
+            case 5:
+                Debug.Log(Global.Player.Idcarte2);
+                J5carte1.GetComponent<SpriteRenderer>().sprite = Global.TabD.getImageind(Global.Player.Idcarte2).Sprite;
+                J5carte2.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte3).Sprite;
+                J5carte3.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte4).Sprite;
+                J5carte4.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte5).Sprite;
+                J5carte5.GetComponent<SpriteRenderer>().sprite = Global.TabL.getImageind(Global.Player.Idcarte1).Sprite;
+                break;
+            
+            case 6:
+                J6carte1.GetComponent<SpriteRenderer>().sprite = Global.TabD.getImageind(Global.Player.Idcarte2).Sprite;
+                J6carte2.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte3).Sprite;
+                J6carte3.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte4).Sprite;
+                J6carte4.GetComponent<SpriteRenderer>().sprite = Global.TabE.getImageind(Global.Player.Idcarte5).Sprite;
+                J6carte5.GetComponent<SpriteRenderer>().sprite = Global.TabL.getImageind(Global.Player.Idcarte1).Sprite;
+                break;
+                
+        }
         if (Global.Player.Place != 1)
         { 
             Destroy(J1carte1);
