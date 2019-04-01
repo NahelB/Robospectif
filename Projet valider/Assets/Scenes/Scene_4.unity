@@ -747,7 +747,7 @@ SpriteRenderer:
   m_Size: {x: 2.3935485, y: 3.348387}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &218227605
@@ -1013,7 +1013,7 @@ SpriteRenderer:
   m_Size: {x: 7.42, y: 10.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &461871655
@@ -2079,8 +2079,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   premierJoueur: 0
   position: 0
-  indice: 0
-  images: []
   Plateau: {fileID: 833349769}
   J1carte1: {fileID: 1486465709}
   J1carte2: {fileID: 1142561402}
@@ -2517,7 +2515,7 @@ SpriteRenderer:
   m_Size: {x: 2.3935485, y: 3.348387}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1039467134
@@ -3128,7 +3126,7 @@ SpriteRenderer:
   m_Size: {x: 2.3935485, y: 3.348387}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1201936994
@@ -3527,7 +3525,7 @@ SpriteRenderer:
   m_Size: {x: 2.3935485, y: 3.348387}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1290782269
@@ -3926,7 +3924,7 @@ SpriteRenderer:
   m_Size: {x: 2.38, y: 3.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &1486465713
