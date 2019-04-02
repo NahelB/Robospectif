@@ -24,8 +24,9 @@ public class SansHUD : NetworkManager
     public NetworkConnection id;
     public bool conceptionTerminee;
     public static int premierFini;
-    public string Ip_serveur = "192.168.13.1"; // IP Table 192.168.43.40    192.168.1.10
+    public string Ip_serveur = "192.168.137.1"; // IP Table 192.168.43.40    192.168.1.10
     public static string spriteString;
+    public static int[] positions = new int[] { 0, 0, 0, 0, 0, 0 };
 
     void Start()
     {

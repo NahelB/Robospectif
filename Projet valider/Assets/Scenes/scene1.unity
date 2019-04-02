@@ -324,6 +324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 164081494}
   i: 2
+  position: 2
+  text: {fileID: 443635525}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -461,6 +463,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 185351764}
   i: 4
+  position: 4
+  text: {fileID: 1977956466}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -598,6 +602,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 327374659}
   i: 1
+  position: 1
+  text: {fileID: 218851114}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -896,6 +902,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 567987596}
   i: 6
+  position: 6
+  text: {fileID: 825706651}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -1257,6 +1265,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 958076236}
   i: 5
+  position: 5
+  text: {fileID: 1498174927}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -1703,6 +1713,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   button: {fileID: 1820631292}
   i: 3
+  position: 3
+  text: {fileID: 1955984037}
   scene:
     m_Handle: 1
   sceneSuivante:

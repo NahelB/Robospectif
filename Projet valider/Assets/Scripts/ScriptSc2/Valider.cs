@@ -24,7 +24,7 @@ public class Valider : MonoBehaviour
     void Start()
     {
         button.onClick.AddListener(() => ButtonClicked());
-        position = selectUser.position;
+        position = selectUser.positionEffective;
         client.RegisterHandler(chronoID, onChronoReceived);
     }
 
