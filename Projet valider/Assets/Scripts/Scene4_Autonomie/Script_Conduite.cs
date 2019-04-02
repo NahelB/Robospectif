@@ -48,7 +48,7 @@ public class Script_Conduite : MonoBehaviour
     {
 
         // Position du joueur
-        // positionJoueur = XXXXXXXXXXXXX;
+        positionJoueur = SansHUD.premierFini;
 
         // Definie l'orientation et la postion de la partie Conduit
         // En fonction de la position du joueur
