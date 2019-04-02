@@ -20,7 +20,7 @@ public class Script_Autonomie : MonoBehaviour
     //Pour la position du centre des Objets au debut
     private float positionDebutX;  
     private float positionDebutY;
-    private float positionDebutZ = -2;
+    private float positionDebutZ = -1;
     private int ecart = 2;
 
 
@@ -46,7 +46,7 @@ public class Script_Autonomie : MonoBehaviour
     void Start()
     {
         // Position du joueur
-             // positionJoueur = XXXXXXXXXXXXX;
+        positionJoueur = SansHUD.premierFini;
 
         // Definie l'orientation et la postion de la partie Conduit
         // En fonction de la position du joueur
