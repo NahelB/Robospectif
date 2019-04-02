@@ -57,63 +57,76 @@ public class Initialisation : MonoBehaviour
 
         //Player p = Global.Player;
 
-        premierJoueur = SansHUD.premierFini;
+        premierJoueur = 3;
+        //premierJoueur = SansHUD.premierFini;
 
         
         switch (premierJoueur)
         {
+            
             case 1:
-                
+                /*
                 J1carte1.GetComponent<SpriteRenderer>().sprite = images[1];
                 J1carte2.GetComponent<SpriteRenderer>().sprite = images[2];
                 J1carte3.GetComponent<SpriteRenderer>().sprite = images[3];
                 J1carte4.GetComponent<SpriteRenderer>().sprite = images[4];
                 J1carte5.GetComponent<SpriteRenderer>().sprite = images[0];
-
+                */
              break;
             
             case 2:
+                /*
                 J2carte1.GetComponent<SpriteRenderer>().sprite = images[1];
                 J2carte2.GetComponent<SpriteRenderer>().sprite = images[2];
                 J2carte3.GetComponent<SpriteRenderer>().sprite = images[3];
                 J2carte4.GetComponent<SpriteRenderer>().sprite = images[4];
                 J2carte5.GetComponent<SpriteRenderer>().sprite = images[0];
+                */
                 break;
+                
             
             case 3:
+                /*
                 J3carte1.GetComponent<SpriteRenderer>().sprite = images[1];
                 J3carte2.GetComponent<SpriteRenderer>().sprite = images[2];
                 J3carte3.GetComponent<SpriteRenderer>().sprite = images[3];
                 J3carte4.GetComponent<SpriteRenderer>().sprite = images[4];
                 J3carte5.GetComponent<SpriteRenderer>().sprite = images[0];
+                */
                 Plateau.transform.Rotate(Vector3.forward * 90);
                 break;
                 
             
             case 4:
+                /*
                 J4carte1.GetComponent<SpriteRenderer>().sprite = images[1];
                 J4carte2.GetComponent<SpriteRenderer>().sprite = images[2];
                 J4carte3.GetComponent<SpriteRenderer>().sprite = images[3];
                 J4carte4.GetComponent<SpriteRenderer>().sprite = images[4];
                 J4carte5.GetComponent<SpriteRenderer>().sprite = images[0];
+                */
                 Plateau.transform.Rotate(Vector3.forward * 180);
                 break;
             
             case 5:
+                /*
                 J5carte1.GetComponent<SpriteRenderer>().sprite = images[1];
                 J5carte2.GetComponent<SpriteRenderer>().sprite = images[2];
                 J5carte3.GetComponent<SpriteRenderer>().sprite = images[3];
                 J5carte4.GetComponent<SpriteRenderer>().sprite = images[4];
                 J5carte5.GetComponent<SpriteRenderer>().sprite = images[0];
+                */
                 Plateau.transform.Rotate(Vector3.forward * 180);
                 break;
             
             case 6:
+                /*
                 J6carte1.GetComponent<SpriteRenderer>().sprite = images[1];
                 J6carte2.GetComponent<SpriteRenderer>().sprite = images[2];
                 J6carte3.GetComponent<SpriteRenderer>().sprite = images[3];
                 J6carte4.GetComponent<SpriteRenderer>().sprite = images[4];
                 J6carte5.GetComponent<SpriteRenderer>().sprite = images[0];
+                */
                 Plateau.transform.Rotate(Vector3.forward * -90);
                 break;
              
