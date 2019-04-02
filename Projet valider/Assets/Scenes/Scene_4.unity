@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6453d8624659074294a57300b905828, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  premierJoueur: 0
+  premierJoueur: 1
   position: 0
   Plateau: {fileID: 833349769}
   J1carte1: {fileID: 1486465709}
