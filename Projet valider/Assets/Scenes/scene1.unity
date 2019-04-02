@@ -326,6 +326,8 @@ MonoBehaviour:
   i: 2
   scene:
     m_Handle: 1
+  sceneSuivante:
+    m_Handle: 0
 --- !u!1 &185351762
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +463,8 @@ MonoBehaviour:
   i: 4
   scene:
     m_Handle: 1
+  sceneSuivante:
+    m_Handle: 0
 --- !u!1 &218851112
 GameObject:
   m_ObjectHideFlags: 0
@@ -596,6 +600,8 @@ MonoBehaviour:
   i: 1
   scene:
     m_Handle: 1
+  sceneSuivante:
+    m_Handle: 0
 --- !u!114 &327374659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,6 +898,8 @@ MonoBehaviour:
   i: 6
   scene:
     m_Handle: 1
+  sceneSuivante:
+    m_Handle: 0
 --- !u!114 &567987596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1251,6 +1259,8 @@ MonoBehaviour:
   i: 5
   scene:
     m_Handle: 1
+  sceneSuivante:
+    m_Handle: 0
 --- !u!1 &966364462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,8 +1491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44075846fbbac4748a5013b0c35c9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  url: http://images.earthcam.com/ec_metros/ourcams/fridays.jpg
 --- !u!1 &1498174925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,6 +1705,8 @@ MonoBehaviour:
   i: 3
   scene:
     m_Handle: 1
+  sceneSuivante:
+    m_Handle: 0
 --- !u!1 &1955984035
 GameObject:
   m_ObjectHideFlags: 0

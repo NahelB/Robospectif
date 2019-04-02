@@ -177,6 +177,7 @@ public class Main : MonoBehaviour
         private static TabImage tabL;
         private static TabImage tabD;
         private static TabImage tabE;
+        private static TabImage tabP;
         public static Player[] tabPlayer;
         private static int nbjoueur;
 
@@ -250,6 +251,12 @@ public class Main : MonoBehaviour
             get => tabE;
             set => tabE = value;
         }
+
+        public static TabImage TabP
+        {
+            get => tabP;
+            set => tabP = value;
+        }
     }
 
     private TabImage tab;
@@ -262,7 +269,53 @@ public class Main : MonoBehaviour
         initializeLoco();
         initializeDi();
         initializeEqui();
+        initializePerso();
 
+    }
+
+    private void initializePerso()
+    {
+        tab = new TabImage();
+        for (int i = 0; i < 2; i++)
+        {
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Agathe")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Antonio")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Aurelie")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Bob")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Camille")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Christine")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Corinne")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/David")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Denis")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Dimitri")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Dominik")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Eleonore")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Elise")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Frederic")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Gaetan")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Jacques")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Johanna")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/John")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Judith")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Julio")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Laura")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Luc")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Marie")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Mathilde")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Mohammed")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Nadege")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Nathalie")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Nicolas")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Patrick")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Philippe")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Rose")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Sarah")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Thierry")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Tom")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Veronique")));
+            tab.addImage(new Image(tab.Taille, Resources.Load<Sprite>("image/Personnages/Yvette")));
+        }
+        Global.TabP = tab;
     }
 
     private void initializeLoco()

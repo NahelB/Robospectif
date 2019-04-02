@@ -1134,22 +1134,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2067429856}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a9b1ff2cab8004a8930a8a6193cfac, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c1194203cdfdd942993b6fc6305396b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 987154404}
-  dimensionGO1: {fileID: 0}
-  dimensionGO2: {fileID: 0}
-  dimensionGO3: {fileID: 0}
-  locomotionGO1: {fileID: 0}
-  locomotionGO2: {fileID: 0}
-  locomotionGO3: {fileID: 0}
-  equipementGO1: {fileID: 0}
-  equipementGO2: {fileID: 0}
-  equipementGO3: {fileID: 0}
-  equipementGO4: {fileID: 0}
-  equipementGO5: {fileID: 0}
-  equipementGO6: {fileID: 0}
+  personnageGO1: {fileID: 2065034044}
+  personnageGO2: {fileID: 1302260691}
+  personnageGO3: {fileID: 1926893409}
+  personnageGO4: {fileID: 378255251}
+  personnageGO5: {fileID: 2007135621}
+  personnageGO6: {fileID: 1826169336}
 --- !u!114 &2067429859
 MonoBehaviour:
   m_ObjectHideFlags: 0
