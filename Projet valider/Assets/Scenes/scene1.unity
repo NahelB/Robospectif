@@ -325,7 +325,6 @@ MonoBehaviour:
   button: {fileID: 164081494}
   i: 2
   position: 2
-  text: {fileID: 443635525}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -464,7 +463,6 @@ MonoBehaviour:
   button: {fileID: 185351764}
   i: 4
   position: 4
-  text: {fileID: 1977956466}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -603,7 +601,6 @@ MonoBehaviour:
   button: {fileID: 327374659}
   i: 1
   position: 1
-  text: {fileID: 218851114}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -903,7 +900,6 @@ MonoBehaviour:
   button: {fileID: 567987596}
   i: 6
   position: 6
-  text: {fileID: 825706651}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -1266,7 +1262,6 @@ MonoBehaviour:
   button: {fileID: 958076236}
   i: 5
   position: 5
-  text: {fileID: 1498174927}
   scene:
     m_Handle: 1
   sceneSuivante:
@@ -1365,6 +1360,7 @@ GameObject:
   - component: {fileID: 1020578804}
   - component: {fileID: 1020578805}
   - component: {fileID: 1020578806}
+  - component: {fileID: 1020578807}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1501,6 +1497,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44075846fbbac4748a5013b0c35c9735, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1020578807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1020578799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036c4d4f6e51d3848be62fa608000af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button1: {fileID: 327374659}
+  button2: {fileID: 164081494}
+  button3: {fileID: 1820631292}
+  button4: {fileID: 185351764}
+  button5: {fileID: 958076236}
+  button6: {fileID: 567987596}
+  text1: {fileID: 218851114}
+  text2: {fileID: 443635525}
+  text3: {fileID: 1955984037}
+  text4: {fileID: 1977956466}
+  text5: {fileID: 1498174927}
+  text6: {fileID: 825706651}
 --- !u!1 &1498174925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1714,7 +1734,6 @@ MonoBehaviour:
   button: {fileID: 1820631292}
   i: 3
   position: 3
-  text: {fileID: 1955984037}
   scene:
     m_Handle: 1
   sceneSuivante:

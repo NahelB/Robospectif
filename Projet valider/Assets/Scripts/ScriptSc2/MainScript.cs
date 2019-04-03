@@ -23,6 +23,7 @@ public class MainScript : MonoBehaviour
     public static Main.Image[] dimensions;
     public static Main.Image[] locomotions;
     public static Main.Image[] equipements;
+    private int position = selectUser.positionStatic;
 
     private void RandomEqui()
     {
@@ -115,7 +116,7 @@ public class MainScript : MonoBehaviour
         
        
         Main.TabImage tab = Main.Global.TabD;
-        text.text = "Joueur : " + player.Id;
+        text.text = "Joueur : " + position.ToString();
         RandomDim();
         
         RandomLoco();

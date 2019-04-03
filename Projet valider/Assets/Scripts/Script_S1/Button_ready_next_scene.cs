@@ -20,25 +20,34 @@ public class Button_ready_next_scene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-  
+
     void OnMouseDown()
     {
         // ----- PARTIE NATHAN -----
         // Envoies des positions
         for (int i = 1; i <= 6; i++)
         {
-            PlayerPrefs.SetInt("P" + i, PlayerPrefs.GetInt("LaPosition" + i));    
+            PlayerPrefs.SetInt("P" + i, PlayerPrefs.GetInt("LaPosition" + i));
         }
         // Envoies le nombre de joueur
         PlayerPrefs.SetInt("nombreJoueur", PlayerPrefs.GetInt("nbJoueur"));
+        int indice = 1;
         for (int i = 0; i <= 5; i++)
         {
-            positions[i] = PlayerPrefs.GetInt("P" + (i + 1));     // Position des joueurs
+            if (PlayerPrefs.GetInt("P" + (i + 1)) == 0)
+            {
+                positions[i] = 0;
+            }
+            else
+            {
+                positions[i] = indice;
+                indice++;
+            }     // Position des joueurs
         }
-        for (int i =0; i < 6; i++)
+        for (int i = 0; i < 6; i++)
         {
             Debug.Log("positions[" + i + "] = " + positions[i]);
         }
@@ -50,11 +59,12 @@ public class Button_ready_next_scene : MonoBehaviour
         message.position5 = positions[4];
         message.position6 = positions[5];
         NetworkServer.SendToAll(positionsID, message);
+        Debug.Log("envoi des positions");
 
         // --------------------------
 
         // Debug.Log("Click");
         SceneManager.LoadScene("Scene_2");
     }
-    
+
 }

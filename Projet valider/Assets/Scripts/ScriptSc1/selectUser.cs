@@ -9,15 +9,16 @@ public class selectUser : MonoBehaviour
 {
     // Start is called before the first frame update
     public Button button;
-    public static int positionEffective;
-    private int isActive;
+    private int positionEffective;
+    public static int positionStatic;
+    private static int isActive;
     public int i;
     public int position;
-    public Text text;
+    public static Text text;
     public Scene scene;
     private Main.Global g;
     public Main.Player player;
-    public static NetworkClient client;
+    public static NetworkClient client = Init.client;
     public Scene sceneSuivante;
     short messageID = 1000;
     short positionsID = 1005;
@@ -29,11 +30,37 @@ public class selectUser : MonoBehaviour
         //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
         // InvokeRepeating("requette", 1f, 1f);
         button.gameObject.SetActive(false);
-        client = SansHUD.myclient;
-        client.RegisterHandler(positionsID, OnPositionsReceived);
+        button.onClick.AddListener(() => ButtonClicked(i));
+        //client.RegisterHandler(positionsID, OnPositionsReceived);
+        //Debug.Log(client.handlers.Values);
     }
 
-    private void OnPositionsReceived(NetworkMessage netMsg)
+    void Update()
+    {
+        switch (position)
+        {
+            case 1:
+                positionEffective = Init.position1;
+                break;
+            case 2:
+                positionEffective = Init.position2;
+                break;
+            case 3:
+                positionEffective = Init.position3;
+                break;
+            case 4:
+                positionEffective = Init.position4;
+                break;
+            case 5:
+                positionEffective = Init.position5;
+                break;
+            case 6:
+                positionEffective = Init.position6;
+                break;
+        }
+    }
+
+    /*public static void OnPositionsReceived(NetworkMessage netMsg)
     {
         var message = netMsg.ReadMessage<MyPositionsMessage>();
         switch (position)
@@ -57,25 +84,27 @@ public class selectUser : MonoBehaviour
                 isActive = message.position6;
                 break;
         }
+        Debug.Log("isActive : " + isActive);
         if (isActive != 0)
         {
             button.gameObject.SetActive(true);
             text.text = isActive.ToString();
             positionEffective = isActive;
         }
-    }
+    }*/
 
     void ButtonClicked(int i)
     {
-        //position = i;
+        Debug.Log("bouton cliqué");
         Debug.Log(" i " + i);
         //Output this to console when the Button3 is clicked
         Main.Global.Player = new Main.Player(i);
         Debug.Log(" ID " + Main.Global.Player.Id);
+        positionStatic = positionEffective;
         MyNetworkMessage message = new MyNetworkMessage();
-        message.message = Main.Global.Player.Id;
+        message.message = positionEffective;
         client.Send(messageID, message);
-        PlayerPrefs.SetInt("idplayer", Main.Global.Player.Id);
+        PlayerPrefs.SetInt("idplayer", positionEffective);
         //StartCoroutine(selectPlayer(i));
         SceneManager.LoadScene("scene2");
         Debug.Log(i);
@@ -84,11 +113,11 @@ public class selectUser : MonoBehaviour
     IEnumerator selectPlayer(int i)
     {
         WWWForm form = new WWWForm();
-        form.AddField("id",i);
-        WWW www = new WWW("https://primsie-spears.000webhostapp.com/estSelect.php",form);
+        form.AddField("id", i);
+        WWW www = new WWW("https://primsie-spears.000webhostapp.com/estSelect.php", form);
         yield return www;
     }
-    
+
     private void requette()
     {
         button.onClick.AddListener(() => ButtonClicked(i));

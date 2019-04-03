@@ -24,7 +24,7 @@ public class SansHUD : NetworkManager
     public NetworkConnection id;
     public bool conceptionTerminee;
     public static int premierFini;
-    public string Ip_serveur = "192.168.43.98"; // IP Table 192.168.43.40    192.168.1.10
+    public string Ip_serveur = "192.168.1.10"; // IP Table 192.168.43.40    192.168.1.10
     public static string spriteString;
     public static int[] positions = new int[] { 0, 0, 0, 0, 0, 0 };
 
@@ -56,7 +56,7 @@ public class SansHUD : NetworkManager
         NetworkServer.RegisterHandler(messageID, OnMessageReceived);
         NetworkServer.RegisterHandler(imageID, onImageReceived);
         NetworkServer.RegisterHandler(conceptionID, onConceptionReceived);
-        NetworkServer.RegisterHandler(1005, onTestReceived);
+        //NetworkServer.RegisterHandler(1005, onTestReceived);
     }
 
     private void onTestReceived(NetworkMessage netMsg)

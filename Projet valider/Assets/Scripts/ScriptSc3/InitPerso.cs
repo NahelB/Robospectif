@@ -13,7 +13,15 @@ public class InitPerso : MonoBehaviour
     public Image personnageGO4;
     public Image personnageGO5;
     public Image personnageGO6;
+    public Image tick1;
+    public Image tick2;
+    public Image tick3;
+    public Image tick4;
+    public Image tick5;
+    public Image tick6;
+    private Image[] ticks;
     public static Main.Image[] personnages;
+    private int nbJoueurs = Init.nbJoueurs;
 
     private void RandomPerso()
     {
@@ -66,14 +74,19 @@ public class InitPerso : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = Main.Global.Player;
-        Main.Global.addPlayer(player);
+        /*player = Main.Global.Player;
+        Main.Global.addPlayer(player);*/
 
-        Debug.Log(Main.Global.Player.ToString());
+        //Debug.Log(Main.Global.Player.ToString());
 
+        ticks = new Image[] { tick1, tick2, tick3, tick4, tick5, tick6 };
+        for (int i = 0; i < ticks.Length; i++)
+        {
+            ticks[i].gameObject.SetActive(false);
+        }
 
         Main.TabImage tab = Main.Global.TabD;
-        text.text = "Joueur : " + player.Id;
+        text.text = "Joueur : " + selectUser.positionStatic;
         RandomPerso();
     }
 
