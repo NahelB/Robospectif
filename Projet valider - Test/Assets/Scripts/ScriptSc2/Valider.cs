@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Valider : MonoBehaviour
@@ -41,11 +42,11 @@ public class Valider : MonoBehaviour
     private void ButtonClicked()
     {
         joueur = MainScript.joueur;
-        joueur.dim = dim.sprite;
-        joueur.loco = loco.sprite;
-        joueur.equi1 = equi0.sprite;
-        joueur.equi2 = equi1.sprite;
-        joueur.equi3 = equi2.sprite;
+        joueur.SetDim(dim.sprite);
+        joueur.SetLoco(loco.sprite);
+        joueur.SetEqui1(equi0.sprite);
+        joueur.SetEqui2(equi1.sprite);
+        joueur.SetEqui3(equi2.sprite);
         MyNetworkMessage conception = new MyNetworkMessage();
         conception.message = position;
         client.Send(conceptionID, conception);
@@ -71,6 +72,7 @@ public class Valider : MonoBehaviour
         client.Send(idMessage, mEqui0);
         client.Send(idMessage, mEqui1);
         client.Send(idMessage, mEqui2);
+        SceneManager.LoadScene("scene2bis");
         //if (position == SansHUD.premierFini) {
         //    MyImageMessage mLoco = new MyImageMessage();
         //    mLoco.image = loco.sprite.ToString();

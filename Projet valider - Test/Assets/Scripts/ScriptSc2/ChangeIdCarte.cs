@@ -19,7 +19,7 @@ public class ChangeIdCarte : MonoBehaviour
     {
         //Debug.Log(p.ToString());
         StartCoroutine(changeId());
-        SceneManager.LoadScene(scene.handle);
+        //SceneManager.LoadScene(scene.handle);
         
 
     }
