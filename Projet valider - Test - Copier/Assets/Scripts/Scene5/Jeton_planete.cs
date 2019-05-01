@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jeton_societe : MonoBehaviour
+public class Jeton_planete : MonoBehaviour
 {
-    private bool estchanger = true;
-    private SpriteRenderer rend;
-    public Sprite Societe_positif, Societe_negatif;
+
+    public bool estchanger = true;
+    public SpriteRenderer rend;
+    public Sprite Planete_positif, Planete_negatif;
     private Vector3 screenPoint;
     private Vector3 offset;
     private Vector3 curScreenPoint;
@@ -16,8 +17,11 @@ public class Jeton_societe : MonoBehaviour
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        Societe_negatif = Resources.Load<Sprite>("Jetons/Societe_negatif");
-        Societe_positif = Resources.Load<Sprite>("Jetons/Societe_positif");
+        Planete_negatif = Resources.Load<Sprite>("Jetons/Planete_negatif");
+        Planete_positif = Resources.Load<Sprite>("Jetons/Planete_positif");
+
+        
+        
     }
 
 
@@ -34,7 +38,7 @@ public class Jeton_societe : MonoBehaviour
         {
             if (estchanger)
             {
-
+                
                 Jeton_usage.nb_bonus[1]++;
                 Debug.Log(Jeton_usage.nb_bonus[1]);
             }
@@ -132,23 +136,24 @@ public class Jeton_societe : MonoBehaviour
                 Jeton_usage.nb_malus[6]++;
             this.gameObject.SetActive(false);
         }
+
     }
 
 
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
 
         
         if (estchanger)
         {
-            rend.sprite = Societe_negatif;
+            rend.sprite = Planete_negatif;
             estchanger = false;
             Debug.Log("est changer = " + estchanger);
         }
         else if (!estchanger)
         {
-            rend.sprite = Societe_positif;
+            rend.sprite = Planete_positif;
             estchanger = true;
             Debug.Log("est changer = " + estchanger);
         }
@@ -170,7 +175,7 @@ public class Jeton_societe : MonoBehaviour
             new Vector3(position.x, position.y, screenPoint.z));
     }
 
-    private void OnMouseDrag()
+    void OnMouseDrag()
     {
         // calcul la nouvelle position
         Vector3 position = Vector3.zero;
@@ -187,9 +192,10 @@ public class Jeton_societe : MonoBehaviour
         // Debug.Log("pos is " + curScreenPoint.x);
 
 
-
+        
 
     }
+
 
 
 }

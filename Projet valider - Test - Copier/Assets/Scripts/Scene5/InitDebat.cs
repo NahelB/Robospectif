@@ -31,11 +31,12 @@ public class InitDebat : MonoBehaviour
         persos[4] = perso4;
         persos[5] = perso5;
 
+        /*
         for (int i = 0; i < 6; i++)
         {
             persos[i].gameObject.SetActive(false);
         }
-
+        */
         NetworkServer.RegisterHandler(persosID, onPersoReceived);
         
     }

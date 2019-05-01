@@ -11,7 +11,9 @@ public class Jeton_usage : MonoBehaviour
     private Vector3 offset;
     private Vector3 curScreenPoint;
     private GameObject objet;
-    private float startX, startY;
+    public static int[] nb_bonus;
+    public static int[] nb_malus;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +21,8 @@ public class Jeton_usage : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         Usage_negatif = Resources.Load<Sprite>("Jetons/Usage_negatif");
         Usage_positif = Resources.Load<Sprite>("Jetons/Usage_positif");
-        startX = curScreenPoint.x;
-        startY = curScreenPoint.y;
-        Debug.Log(startX);
-        Debug.Log(startY);
+        nb_bonus = new int[6];
+        nb_malus = new int[6];
 
     }
 
@@ -38,8 +38,16 @@ public class Jeton_usage : MonoBehaviour
          && curScreenPoint.x <= 675 && curScreenPoint.y >= 30 )
 
         {
-            curScreenPoint.x = startX;
-            curScreenPoint.y = startY;
+            if (estchanger)
+            {
+                
+                nb_bonus[1]++;
+                Debug.Log(nb_bonus[1]);
+            }
+            else
+                nb_malus[1]++;
+            this.gameObject.SetActive(false);
+
         }
 
 
@@ -50,7 +58,14 @@ public class Jeton_usage : MonoBehaviour
          && curScreenPoint.x <= 1375 && curScreenPoint.y >= 30)
 
         {
-            Debug.Log("Joueur 2");
+            if (estchanger)
+            {
+                nb_bonus[2]++;
+                Debug.Log(nb_bonus[2]);
+            }
+            else
+                nb_malus[2]++;
+            this.gameObject.SetActive(false);
         }
 
 
@@ -61,7 +76,14 @@ public class Jeton_usage : MonoBehaviour
          && curScreenPoint.x <= 1900 && curScreenPoint.y >= 405)
 
         {
-            Debug.Log("Joueur 3");
+            if (estchanger)
+            {
+                nb_bonus[3]++;
+                Debug.Log(nb_bonus[3]);
+            }
+            else
+                nb_malus[3]++;
+            this.gameObject.SetActive(false);
         }
 
 
@@ -72,7 +94,14 @@ public class Jeton_usage : MonoBehaviour
          && curScreenPoint.x <= 1425 && curScreenPoint.y >= 710)
 
         {
-            Debug.Log("Joueur 4");
+            if (estchanger)
+            {
+                nb_bonus[4]++;
+                Debug.Log(nb_bonus[4]);
+            }
+            else
+                nb_malus[4]++;
+            this.gameObject.SetActive(false);
         }
 
 
@@ -83,7 +112,14 @@ public class Jeton_usage : MonoBehaviour
          && curScreenPoint.x <= 705 && curScreenPoint.y >= 705)
 
         {
-            Debug.Log("Joueur 5");
+            if (estchanger)
+            {
+                nb_bonus[5]++;
+                Debug.Log(nb_bonus[5]);
+            }
+            else
+                nb_malus[5]++;
+            this.gameObject.SetActive(false);
         }
 
         // Position joueur 6
@@ -93,31 +129,36 @@ public class Jeton_usage : MonoBehaviour
          && curScreenPoint.x <= 375 && curScreenPoint.y >= 420)
 
         {
-            Debug.Log("Joueur 6");
+            if (estchanger)
+            {
+                nb_bonus[6]++;
+                Debug.Log(nb_bonus[6]);
+            }
+            else
+                nb_malus[6]++;
+            this.gameObject.SetActive(false);
         }
 
     }
 
 
-
     private void OnMouseDown()
     {
 
-        if (this.gameObject.name == "Usage_positif")
+        
+        if (estchanger)
         {
-            if (estchanger)
-            {
-                rend.sprite = Usage_negatif;
-                estchanger = false;
-
-            }
-            else if (!estchanger)
-            {
-                rend.sprite = Usage_positif;
-                estchanger = true;
-            }
+            rend.sprite = Usage_negatif;
+            estchanger = false;
 
         }
+        else if (!estchanger)
+        {
+            rend.sprite = Usage_positif;
+            estchanger = true;
+        }
+
+        
 
         Vector3 position = Vector3.zero;
         if (Input.touchCount > 0)
