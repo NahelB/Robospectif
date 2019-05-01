@@ -28,7 +28,7 @@ public class AffichageCouronne : MonoBehaviour
     public GameObject environnement_6;
     public GameObject couronne_6;
 
-    public Sprite[] images;
+    public Sprite[] images = InitDebat.envoi;
 
 
 
@@ -88,6 +88,13 @@ public class AffichageCouronne : MonoBehaviour
                 break;
 
         }
+
+        if (images[0] != null) personnage1.GetComponent<SpriteRenderer>().sprite = images[0];
+        if (images[1] != null) personnage2.GetComponent<SpriteRenderer>().sprite = images[1];
+        if (images[2] != null) personnage3.GetComponent<SpriteRenderer>().sprite = images[2];
+        if (images[3] != null) personnage4.GetComponent<SpriteRenderer>().sprite = images[3];
+        if (images[4] != null) personnage5.GetComponent<SpriteRenderer>().sprite = images[4];
+        if (images[5] != null) personnage6.GetComponent<SpriteRenderer>().sprite = images[5];
 
 
         /*for (int i = 0; i < partieCourante.Joueurs.Length(); i++)
@@ -151,14 +158,4 @@ public class AffichageCouronne : MonoBehaviour
 
         
     }
-
-    /*private void onPersoReceived(NetworkMessage netMsg)
-    {
-        var v = netMsg.ReadMessage<MyPersoMessage>();
-        int i = v.numero;
-        string s = v.image;
-        string spriteString = "image/Personnages/" + s;
-        Sprite sp = Resources.Load<Sprite>(spriteString);
-        images[i] = sp;
-    }*/
 }

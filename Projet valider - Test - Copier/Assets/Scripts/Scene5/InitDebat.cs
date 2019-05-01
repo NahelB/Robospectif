@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class InitDebat : MonoBehaviour
 {
 
-    //public Button button;
+    public Button button;
     private int JoueurCourant = SansHUD.premierFini;
     public GameObject perso0;
     public GameObject perso1;
@@ -23,12 +23,14 @@ public class InitDebat : MonoBehaviour
     private GameObject[] persos;
     private Sprite[] persoSprites;
 
+    public static Sprite[] envoi;
+
     private int[] positions = Text_Connexion.envoi;
 
     // Start is called before the first frame update
     void Start()
     {
-        //button.onClick.AddListener(() => ButtonClicked());
+        button.onClick.AddListener(() => ButtonClicked());
 
         persoSprites = new Sprite[6];
         persos = new GameObject[6];
@@ -50,6 +52,8 @@ public class InitDebat : MonoBehaviour
 
     private void ButtonClicked()
     {
+        Debug.Log("yo");
+        envoi = persoSprites;
         SceneManager.LoadScene("Scene_6");
     }
 
