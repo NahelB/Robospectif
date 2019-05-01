@@ -35,10 +35,9 @@ public class AffichageCouronne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //NetworkServer.RegisterHandler(persosID, onPersoReceived);
         images = new Sprite[6];
 
-        //JoueurCourant = SansHUD.premierFini;
+        JoueurCourant = SansHUD.premierFini;
 
 
         switch (JoueurCourant)

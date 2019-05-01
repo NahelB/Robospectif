@@ -16,6 +16,8 @@ public class Text_Connexion : MonoBehaviour
     public GameObject text_Position_6;      // Texte a la 6eem position (A Gauche)
 
     // ---------- CONSTANTES ----------
+    public static int[] envoi;
+
     private int numJoueur;      // Pour affecter un numero de joueur (1 - 6)
     private Text affichageJoueur;   // Pour convertir de GameObjecte à Text
     private GameObject[] tabText = new GameObject[6];   //Tableau qui contient tout les GameObject "text_Position"
@@ -68,6 +70,7 @@ public class Text_Connexion : MonoBehaviour
         AfficheJoueurConnecter();
         if (nbJoueursConnectes == nbJoueur)
         {
+            envoi = tabNum;
             SceneManager.LoadScene("Scene_3");
         }
 
