@@ -12,6 +12,7 @@ class RegisterHostMessage : MessageBase { public float message; }
 
 public class SansHUD : NetworkManager
 {
+
     public NetworkManager manager;
     public Scene sceneServeur;
     public Scene sceneClient;
@@ -31,6 +32,7 @@ public class SansHUD : NetworkManager
 
     void Start()
     {
+
         conceptionTerminee = false;
         string ipv4 = IPManager.GetIP(IPManager.ADDRESSFAM.IPv4); // On met l'adresse IP de l'appareil courant dans ipv4
         if(ipv4 == Ip_serveur) 
@@ -106,7 +108,6 @@ public class SansHUD : NetworkManager
 
     void OnMessageReceived(NetworkMessage message)
     {
-        
         int id = message.ReadMessage<MyNetworkMessage>().message;
         Debug.Log("id_serveur : " + id);
         Text_Connexion.recupInfoJoueur(id);
