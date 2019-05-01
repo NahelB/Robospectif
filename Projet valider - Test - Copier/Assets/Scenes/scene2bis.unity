@@ -557,7 +557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eea537389da1a54eae487ad4ec61060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 0}
+  text: {fileID: 262772932}
 --- !u!1 &2074293082
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +570,6 @@ GameObject:
   - component: {fileID: 2074293087}
   - component: {fileID: 2074293086}
   - component: {fileID: 2074293085}
-  - component: {fileID: 2074293084}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -600,31 +599,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2074293084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074293082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a9b1ff2cab8004a8930a8a6193cfac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 262772932}
-  dimensionGO1: {fileID: 0}
-  dimensionGO2: {fileID: 0}
-  dimensionGO3: {fileID: 0}
-  locomotionGO1: {fileID: 0}
-  locomotionGO2: {fileID: 0}
-  locomotionGO3: {fileID: 0}
-  equipementGO1: {fileID: 0}
-  equipementGO2: {fileID: 0}
-  equipementGO3: {fileID: 0}
-  equipementGO4: {fileID: 0}
-  equipementGO5: {fileID: 0}
-  equipementGO6: {fileID: 0}
 --- !u!114 &2074293085
 MonoBehaviour:
   m_ObjectHideFlags: 0

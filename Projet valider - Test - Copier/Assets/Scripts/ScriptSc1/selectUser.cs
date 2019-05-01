@@ -29,7 +29,7 @@ public class selectUser : MonoBehaviour
     {
         //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
         // InvokeRepeating("requette", 1f, 1f);
-        button.gameObject.SetActive(false);
+        //button.gameObject.SetActive(false);
         button.onClick.AddListener(() => ButtonClicked(i));
         //client.RegisterHandler(positionsID, OnPositionsReceived);
         //Debug.Log(client.handlers.Values);
