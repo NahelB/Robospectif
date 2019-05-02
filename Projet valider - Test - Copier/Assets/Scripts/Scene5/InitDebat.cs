@@ -56,6 +56,10 @@ public class InitDebat : MonoBehaviour
 
     private void ButtonClicked()
     {
+        for (int i = 0; i < 6; i++)
+        {
+            Debug.Log("persoSprites[" + i + "] = " + persoSprites[i]);
+        }
         envoi = persoSprites;
         SceneManager.LoadScene("Scene_6");
     }
