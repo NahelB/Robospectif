@@ -33,6 +33,10 @@ public class InitDebat : MonoBehaviour
         button.onClick.AddListener(() => ButtonClicked());
 
         persoSprites = new Sprite[6];
+        for (int i = 0; i < 6; i++)
+        {
+            persoSprites[i] = null;
+        }
         persos = new GameObject[6];
         persos[0] = perso0;
         persos[1] = perso1;
@@ -52,7 +56,6 @@ public class InitDebat : MonoBehaviour
 
     private void ButtonClicked()
     {
-        Debug.Log("yo");
         envoi = persoSprites;
         SceneManager.LoadScene("Scene_6");
     }
@@ -68,9 +71,9 @@ public class InitDebat : MonoBehaviour
         {
             if ((positions[(2*j)+1] == i) && (positions[(2*j)+1] != JoueurCourant))
             {
-                persoSprites[j] = sp;
-                persos[j].transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = sp;
-                persos[j].gameObject.SetActive(true);
+                persoSprites[positions[2*j]-1] = sp;
+                persos[positions[2 * j]-1].transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = sp;
+                persos[positions[2 * j]-1].gameObject.SetActive(true);
 
             }
         }        

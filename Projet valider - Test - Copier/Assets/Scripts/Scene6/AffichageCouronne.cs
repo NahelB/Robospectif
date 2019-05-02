@@ -35,10 +35,27 @@ public class AffichageCouronne : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        images = new Sprite[6];
-
         JoueurCourant = SansHUD.premierFini;
+        
+        personnage1.gameObject.SetActive(false);
+        personnage2.gameObject.SetActive(false);
+        personnage3.gameObject.SetActive(false);
+        personnage4.gameObject.SetActive(false);
+        personnage5.gameObject.SetActive(false);
+        personnage6.gameObject.SetActive(false);
 
+        //personnage1.GetComponent<SpriteRenderer>().sprite = images[0];
+        //personnage1.gameObject.SetActive(true);
+        personnage2.GetComponent<SpriteRenderer>().sprite = images[1];
+        personnage2.gameObject.SetActive(true);
+        personnage3.GetComponent<SpriteRenderer>().sprite = images[2];
+        personnage3.gameObject.SetActive(true);
+        personnage4.GetComponent<SpriteRenderer>().sprite = images[3];
+        personnage4.gameObject.SetActive(true);
+        personnage5.GetComponent<SpriteRenderer>().sprite = images[4];
+        personnage5.gameObject.SetActive(true);
+        personnage6.GetComponent<SpriteRenderer>().sprite = images[5];
+        personnage6.gameObject.SetActive(true);
 
         switch (JoueurCourant)
         {
@@ -88,13 +105,7 @@ public class AffichageCouronne : MonoBehaviour
                 break;
 
         }
-
-        if (images[0] != null) personnage1.GetComponent<SpriteRenderer>().sprite = images[0];
-        if (images[1] != null) personnage2.GetComponent<SpriteRenderer>().sprite = images[1];
-        if (images[2] != null) personnage3.GetComponent<SpriteRenderer>().sprite = images[2];
-        if (images[3] != null) personnage4.GetComponent<SpriteRenderer>().sprite = images[3];
-        if (images[4] != null) personnage5.GetComponent<SpriteRenderer>().sprite = images[4];
-        if (images[5] != null) personnage6.GetComponent<SpriteRenderer>().sprite = images[5];
+        
 
 
         /*for (int i = 0; i < partieCourante.Joueurs.Length(); i++)
