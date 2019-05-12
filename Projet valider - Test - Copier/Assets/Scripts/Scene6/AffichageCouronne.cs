@@ -37,16 +37,16 @@ public class AffichageCouronne : MonoBehaviour
     {
         JoueurCourant = SansHUD.premierFini;
         
-        personnage1.gameObject.SetActive(false);
+        /*personnage1.gameObject.SetActive(false);
         personnage2.gameObject.SetActive(false);
         personnage3.gameObject.SetActive(false);
         personnage4.gameObject.SetActive(false);
         personnage5.gameObject.SetActive(false);
         personnage6.gameObject.SetActive(false);
-
+        */
         //personnage1.GetComponent<SpriteRenderer>().sprite = images[0];
         //personnage1.gameObject.SetActive(true);
-        personnage2.GetComponent<SpriteRenderer>().sprite = images[1];
+        /*personnage2.GetComponent<SpriteRenderer>().sprite = images[1];
         personnage2.gameObject.SetActive(true);
         personnage3.GetComponent<SpriteRenderer>().sprite = images[2];
         personnage3.gameObject.SetActive(true);
@@ -56,7 +56,7 @@ public class AffichageCouronne : MonoBehaviour
         personnage5.gameObject.SetActive(true);
         personnage6.GetComponent<SpriteRenderer>().sprite = images[5];
         personnage6.gameObject.SetActive(true);
-
+        */
         switch (JoueurCourant)
         {
 
