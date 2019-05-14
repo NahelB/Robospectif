@@ -50,6 +50,7 @@ public class InitDebat : MonoBehaviour
         {
             persos[i].gameObject.SetActive(false);
         }
+        
         NetworkServer.RegisterHandler(persosID, onPersoReceived);
         
     }

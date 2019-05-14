@@ -41,11 +41,11 @@ public class Jeton_usage : MonoBehaviour
             if (estchanger)
             {
                 
-                nb_bonus[1]++;
-                Debug.Log(nb_bonus[1]);
+                nb_bonus[0]++;
+                Debug.Log(nb_bonus[0]);
             }
             else
-                nb_malus[1]++;
+                nb_malus[0]++;
             this.gameObject.SetActive(false);
 
         }
@@ -60,11 +60,11 @@ public class Jeton_usage : MonoBehaviour
         {
             if (estchanger)
             {
-                nb_bonus[2]++;
-                Debug.Log(nb_bonus[2]);
+                nb_bonus[1]++;
+                Debug.Log(nb_bonus[1]);
             }
             else
-                nb_malus[2]++;
+                nb_malus[1]++;
             this.gameObject.SetActive(false);
         }
 
@@ -78,11 +78,11 @@ public class Jeton_usage : MonoBehaviour
         {
             if (estchanger)
             {
-                nb_bonus[3]++;
-                Debug.Log(nb_bonus[3]);
+                nb_bonus[2]++;
+                Debug.Log(nb_bonus[2]);
             }
             else
-                nb_malus[3]++;
+                nb_malus[2]++;
             this.gameObject.SetActive(false);
         }
 
@@ -96,11 +96,11 @@ public class Jeton_usage : MonoBehaviour
         {
             if (estchanger)
             {
-                nb_bonus[4]++;
-                Debug.Log(nb_bonus[4]);
+                nb_bonus[3]++;
+                Debug.Log(nb_bonus[3]);
             }
             else
-                nb_malus[4]++;
+                nb_malus[3]++;
             this.gameObject.SetActive(false);
         }
 
@@ -114,11 +114,11 @@ public class Jeton_usage : MonoBehaviour
         {
             if (estchanger)
             {
-                nb_bonus[5]++;
-                Debug.Log(nb_bonus[5]);
+                nb_bonus[4]++;
+                Debug.Log(nb_bonus[4]);
             }
             else
-                nb_malus[5]++;
+                nb_malus[4]++;
             this.gameObject.SetActive(false);
         }
 
@@ -131,11 +131,11 @@ public class Jeton_usage : MonoBehaviour
         {
             if (estchanger)
             {
-                nb_bonus[6]++;
-                Debug.Log(nb_bonus[6]);
+                nb_bonus[5]++;
+                Debug.Log(nb_bonus[5]);
             }
             else
-                nb_malus[6]++;
+                nb_malus[5]++;
             this.gameObject.SetActive(false);
         }
 

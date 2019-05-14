@@ -19,8 +19,6 @@ public class Jeton_planete : MonoBehaviour
         rend = GetComponent<SpriteRenderer>();
         Planete_negatif = Resources.Load<Sprite>("Jetons/Planete_negatif");
         Planete_positif = Resources.Load<Sprite>("Jetons/Planete_positif");
-
-        
         
     }
 
@@ -39,11 +37,11 @@ public class Jeton_planete : MonoBehaviour
             if (estchanger)
             {
                 
-                Jeton_usage.nb_bonus[1]++;
-                Debug.Log(Jeton_usage.nb_bonus[1]);
+                Jeton_usage.nb_bonus[0]++;
+                Debug.Log(Jeton_usage.nb_bonus[0]);
             }
             else
-                Jeton_usage.nb_malus[1]++;
+                Jeton_usage.nb_malus[0]++;
             this.gameObject.SetActive(false);
 
         }
@@ -58,11 +56,11 @@ public class Jeton_planete : MonoBehaviour
         {
             if (estchanger)
             {
-                Jeton_usage.nb_bonus[2]++;
-                Debug.Log(Jeton_usage.nb_bonus[2]);
+                Jeton_usage.nb_bonus[1]++;
+                Debug.Log(Jeton_usage.nb_bonus[1]);
             }
             else
-                Jeton_usage.nb_malus[2]++;
+                Jeton_usage.nb_malus[1]++;
             this.gameObject.SetActive(false);
         }
 
@@ -76,11 +74,11 @@ public class Jeton_planete : MonoBehaviour
         {
             if (estchanger)
             {
-                Jeton_usage.nb_bonus[3]++;
-                Debug.Log(Jeton_usage.nb_bonus[3]);
+                Jeton_usage.nb_bonus[2]++;
+                Debug.Log(Jeton_usage.nb_bonus[2]);
             }
             else
-                Jeton_usage.nb_malus[3]++;
+                Jeton_usage.nb_malus[2]++;
             this.gameObject.SetActive(false);
         }
 
@@ -94,11 +92,11 @@ public class Jeton_planete : MonoBehaviour
         {
             if (estchanger)
             {
-                Jeton_usage.nb_bonus[4]++;
-                Debug.Log(Jeton_usage.nb_bonus[4]);
+                Jeton_usage.nb_bonus[3]++;
+                Debug.Log(Jeton_usage.nb_bonus[3]);
             }
             else
-                Jeton_usage.nb_malus[4]++;
+                Jeton_usage.nb_malus[3]++;
             this.gameObject.SetActive(false);
         }
 
@@ -112,11 +110,11 @@ public class Jeton_planete : MonoBehaviour
         {
             if (estchanger)
             {
-                Jeton_usage.nb_bonus[5]++;
-                Debug.Log(Jeton_usage.nb_bonus[5]);
+                Jeton_usage.nb_bonus[4]++;
+                Debug.Log(Jeton_usage.nb_bonus[4]);
             }
             else
-                Jeton_usage.nb_malus[5]++;
+                Jeton_usage.nb_malus[4]++;
             this.gameObject.SetActive(false);
         }
 
@@ -129,11 +127,11 @@ public class Jeton_planete : MonoBehaviour
         {
             if (estchanger)
             {
-                Jeton_usage.nb_bonus[6]++;
-                Debug.Log(Jeton_usage.nb_bonus[6]);
+                Jeton_usage.nb_bonus[5]++;
+                Debug.Log(Jeton_usage.nb_bonus[5]);
             }
             else
-                Jeton_usage.nb_malus[6]++;
+                Jeton_usage.nb_malus[5]++;
             this.gameObject.SetActive(false);
         }
 
