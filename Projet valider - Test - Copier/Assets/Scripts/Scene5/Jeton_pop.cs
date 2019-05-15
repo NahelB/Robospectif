@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class Jeton_usage_ : MonoBehaviour
+public class Jeton_pop : MonoBehaviour
 {
     private Vector3 screenPoint;
     private Vector3 offset;
