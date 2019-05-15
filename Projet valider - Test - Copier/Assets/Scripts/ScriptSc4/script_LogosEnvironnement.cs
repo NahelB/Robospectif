@@ -77,7 +77,7 @@ public class script_LogosEnvironnement : MonoBehaviour
         msg.choixZone0 = choixZone[0];
         msg.choixZone1 = choixZone[1];
         client.Send(persosID, msg);
-        SceneManager.LoadScene("scene4bis");
+        SceneManager.LoadScene("Scene_ChoixJetons");
     }
 
     void Update()
