@@ -5350,7 +5350,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "D\xE9bat termin\xE9"
+  m_Text: "Terminer le d\xE9bat"
 --- !u!222 &1995559549
 CanvasRenderer:
   m_ObjectHideFlags: 0

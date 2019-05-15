@@ -9,6 +9,8 @@ public class Script_Conduite : MonoBehaviour
 
     public int positionJoueur;
 
+    public Button button;
+
     // Curseur
     public Image barre;
     // Partie Attention Requise (TEXTE)
@@ -46,6 +48,7 @@ public class Script_Conduite : MonoBehaviour
     // Methode d'inisialisation
     void Start()
     {
+        button.gameObject.SetActive(false);
 
         // Position du joueur
         positionJoueur = SansHUD.premierFini;
@@ -147,6 +150,7 @@ public class Script_Conduite : MonoBehaviour
             // Niveau pas choisi: HAUT
             cadreTxt1.rectTransform.sizeDelta = tailleCadreMin;    // Taille du Cadre Haut
             texteNiv1.fontSize = tailleTxtMin;                     // Taille du texte Haut
+            //button.gameObject.SetActive(true);
         }
         else
         {
@@ -158,6 +162,7 @@ public class Script_Conduite : MonoBehaviour
                 // Niveau pas choisi: BAS
                 cadreTxt0.rectTransform.sizeDelta = tailleCadreMin;    // Taille du Cadre bas  
                 texteNiv0.fontSize = tailleTxtMin;                     // Taille du texte bas
+                button.gameObject.SetActive(true);
             }
         }
     }

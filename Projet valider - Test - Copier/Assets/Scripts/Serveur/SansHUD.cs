@@ -26,7 +26,7 @@ public class SansHUD : NetworkManager
     public NetworkConnection id;
     public bool conceptionTerminee;
     public static int premierFini;
-    public string Ip_serveur = "192.168.43.98"; // IP Table 192.168.43.40    192.168.1.10  127.0.0.1
+    private string Ip_serveur = "192.168.43.40"; // IP Table 192.168.43.40    192.168.1.10  127.0.0.1
     public static string spriteString;
     public static int[] positions = new int[] { 0, 0, 0, 0, 0, 0 };
 
@@ -101,7 +101,6 @@ public class SansHUD : NetworkManager
         imageString = s;
         string imageType = objectMessage.type;
         spriteString = "image/" + imageType + "/" + imageString;
-        Debug.Log(spriteString);
         Sprite imageSprite = Resources.Load<Sprite>(spriteString);
         Initialisation.get(imageSprite);
     }

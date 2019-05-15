@@ -4796,6 +4796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionJoueur: 1
+  button: {fileID: 1362712857}
   barre: {fileID: 1102083293}
   cadreTxt0: {fileID: 2066549655}
   texteNiv0: {fileID: 470221632}
