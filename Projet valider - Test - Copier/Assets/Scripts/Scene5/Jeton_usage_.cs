@@ -33,6 +33,8 @@ public class Jeton_usage_ : MonoBehaviour
         joueur_du_jeton = v.joueur;
         string s = v.sprite;
         Sprite jeton_actuel = Resources.Load<Sprite>(s);
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = jeton_actuel;
+        this.gameObject.SetActive(true);    
     }
 
     // Update is called once per frame
