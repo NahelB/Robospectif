@@ -14,7 +14,6 @@ public class Nb_carte_position_1_2 : MonoBehaviour
         nb_carte_position_1 = 0;
         nb_carte_position_2 = 0;
         nb_carte_position_3 = 0;
-        
     }
 
     // Update is called once per frame
