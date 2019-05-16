@@ -43,7 +43,7 @@ public class ValiderVainqueur : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            //UnityEngine.SceneManagement.SceneManager.LoadScene("Scene_7");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Scene_fin_tour");
         }
     }
 
