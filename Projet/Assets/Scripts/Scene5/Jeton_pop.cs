@@ -23,7 +23,7 @@ public class Jeton_pop : MonoBehaviour
     {
         nb_bonus = new int[6];
         nb_malus = new int[6];
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
         NetworkServer.RegisterHandler(jeton, onJetonReceived);
     }
 
@@ -34,7 +34,7 @@ public class Jeton_pop : MonoBehaviour
         string s = v.sprite;
         Sprite jeton_actuel = Resources.Load<Sprite>(s);
         this.gameObject.GetComponent<SpriteRenderer>().sprite = jeton_actuel;
-        this.gameObject.SetActive(true);    
+        this.gameObject.SetActive(true);
     }
 
     // Update is called once per frame
