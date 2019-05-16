@@ -67,7 +67,6 @@ public class InitDebat : MonoBehaviour
 
     private void onPersoReceived(NetworkMessage netMsg)
     {
-		Debug.Log("recu");
         var v = netMsg.ReadMessage<MyPersoMessage>();
         int i = v.numero;
         string s = v.image;
@@ -78,7 +77,7 @@ public class InitDebat : MonoBehaviour
             if ((positions[(2*j)+1] == i) && (positions[(2*j)+1] != JoueurCourant))
             {
                 persoSprites[positions[2*j]-1] = sp;
-                persos[positions[2 * j]-1].transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().sprite = sp;
+                persos[positions[2 * j]-1].transform.GetChild(2).gameObject.GetComponent<SpriteRenderer>().sprite = sp;
                 persos[positions[2 * j]-1].gameObject.SetActive(true);
 
             }
