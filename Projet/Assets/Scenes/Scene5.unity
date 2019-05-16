@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 0
+  joueur_du_jeton: 6
 --- !u!212 &464669773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2432,7 +2432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 0
+  joueur_du_jeton: 3
 --- !u!212 &801751236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2789,7 +2789,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 0
+  joueur_du_jeton: 2
 --- !u!212 &885057427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3511,7 +3511,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 0
+  joueur_du_jeton: 4
 --- !u!212 &1146048724
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3631,7 +3631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 0
+  joueur_du_jeton: 5
 --- !u!212 &1162292457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5482,7 +5482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 0
+  joueur_du_jeton: 1
 --- !u!212 &1717592873
 SpriteRenderer:
   m_ObjectHideFlags: 0

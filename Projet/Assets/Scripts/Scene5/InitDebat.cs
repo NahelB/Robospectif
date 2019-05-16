@@ -46,13 +46,13 @@ public class InitDebat : MonoBehaviour
         persos[5] = perso5;
 
         
-        /*for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 6; i++)
         {
             persos[i].gameObject.SetActive(false);
         }
         
         NetworkServer.RegisterHandler(persosID, onPersoReceived);
-        */
+        
     }
 
     private void ButtonClicked()

@@ -23,18 +23,25 @@ public class Jeton_pop : MonoBehaviour
     {
         nb_bonus = new int[6];
         nb_malus = new int[6];
-        //this.gameObject.SetActive(false);
+        this.gameObject.SetActive(false);
         NetworkServer.RegisterHandler(jeton, onJetonReceived);
     }
 
     private void onJetonReceived(NetworkMessage netMsg)
     {
         var v = netMsg.ReadMessage<MyJetonMessage>();
-        joueur_du_jeton = v.joueur;
-        string s = v.sprite;
-        Sprite jeton_actuel = Resources.Load<Sprite>(s);
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = jeton_actuel;
-        this.gameObject.SetActive(true);
+        Debug.Log("joueur " + v.joueur);
+        Debug.Log("position table " + joueur_du_jeton);
+        if (joueur_du_jeton == v.joueur)
+        {
+            string s = "Jetons/" + v.sprite;
+            Debug.Log("sprite jeton : " + s);
+            Sprite jeton_actuel = Resources.Load<Sprite>(s);
+            Debug.Log("sprite jeton : " + jeton_actuel);
+            Debug.Log(this.gameObject);
+            this.gameObject.SetActive(true);
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = jeton_actuel;
+        }
     }
 
     // Update is called once per frame
@@ -142,7 +149,7 @@ public class Jeton_pop : MonoBehaviour
 
         {
             if (estchanger)
-            { 
+            {
                 nb_bonus[5]++;
                 Debug.Log(nb_bonus[5]);
             }
