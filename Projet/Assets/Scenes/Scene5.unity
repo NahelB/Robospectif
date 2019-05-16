@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 10
+    serializedVersion: 12
     m_Resolution: 2
     m_BakeResolution: 40
     m_AtlasSize: 1024
@@ -62,6 +62,7 @@ LightmapSettings:
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
     m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
     m_Padding: 2
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
@@ -76,10 +77,16 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVREnvironmentMIS: 0
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -88,6 +95,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
+    m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -122,8 +130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5310831}
   - component: {fileID: 5310835}
-  - component: {fileID: 5310834}
-  - component: {fileID: 5310833}
   - component: {fileID: 5310832}
   m_Layer: 0
   m_Name: Jeton1
@@ -161,46 +167,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
---- !u!61 &5310833
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310830}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.66, y: 3.67}
-    newSize: {x: 12.64, y: 12.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.66, y: 3.66}
-  m_EdgeRadius: 0
---- !u!114 &5310834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5310830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59a4365c7e225e4695a172c6a45eebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Usage_positif: {fileID: 21300000, guid: ff5526757e9f5e6439085087607fca75, type: 3}
-  Usage_negatif: {fileID: 21300000, guid: acf7fb4cf331b194c8ad02423c4205d0, type: 3}
 --- !u!212 &5310835
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -259,8 +225,6 @@ GameObject:
   m_Component:
   - component: {fileID: 10274948}
   - component: {fileID: 10274952}
-  - component: {fileID: 10274951}
-  - component: {fileID: 10274950}
   - component: {fileID: 10274949}
   m_Layer: 0
   m_Name: Jeton1
@@ -298,46 +262,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
---- !u!61 &10274950
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10274947}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.66, y: 3.67}
-    newSize: {x: 12.64, y: 12.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.66, y: 3.66}
-  m_EdgeRadius: 0
---- !u!114 &10274951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10274947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59a4365c7e225e4695a172c6a45eebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Usage_positif: {fileID: 21300000, guid: ff5526757e9f5e6439085087607fca75, type: 3}
-  Usage_negatif: {fileID: 21300000, guid: acf7fb4cf331b194c8ad02423c4205d0, type: 3}
 --- !u!212 &10274952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -750,8 +674,6 @@ GameObject:
   m_Component:
   - component: {fileID: 192113358}
   - component: {fileID: 192113362}
-  - component: {fileID: 192113361}
-  - component: {fileID: 192113360}
   - component: {fileID: 192113359}
   m_Layer: 0
   m_Name: Jeton1
@@ -789,46 +711,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
---- !u!61 &192113360
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192113357}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.66, y: 3.67}
-    newSize: {x: 12.64, y: 12.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.66, y: 3.66}
-  m_EdgeRadius: 0
---- !u!114 &192113361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192113357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59a4365c7e225e4695a172c6a45eebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Usage_positif: {fileID: 21300000, guid: ff5526757e9f5e6439085087607fca75, type: 3}
-  Usage_negatif: {fileID: 21300000, guid: acf7fb4cf331b194c8ad02423c4205d0, type: 3}
 --- !u!212 &192113362
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1205,7 +1087,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 6
 --- !u!212 &464669773
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1264,8 +1145,6 @@ GameObject:
   m_Component:
   - component: {fileID: 484306374}
   - component: {fileID: 484306378}
-  - component: {fileID: 484306377}
-  - component: {fileID: 484306376}
   - component: {fileID: 484306375}
   m_Layer: 0
   m_Name: Jeton1
@@ -1303,46 +1182,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
---- !u!61 &484306376
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484306373}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.66, y: 3.67}
-    newSize: {x: 12.64, y: 12.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.66, y: 3.66}
-  m_EdgeRadius: 0
---- !u!114 &484306377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484306373}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59a4365c7e225e4695a172c6a45eebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Usage_positif: {fileID: 21300000, guid: ff5526757e9f5e6439085087607fca75, type: 3}
-  Usage_negatif: {fileID: 21300000, guid: acf7fb4cf331b194c8ad02423c4205d0, type: 3}
 --- !u!212 &484306378
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2285,17 +2124,20 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
+    m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 729907667}
@@ -2432,7 +2274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 3
 --- !u!212 &801751236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2789,7 +2630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 2
 --- !u!212 &885057427
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3511,7 +3351,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 4
 --- !u!212 &1146048724
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3631,7 +3470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 5
 --- !u!212 &1162292457
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3769,8 +3607,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1185171676}
   - component: {fileID: 1185171675}
-  - component: {fileID: 1185171674}
-  - component: {fileID: 1185171673}
   - component: {fileID: 1185171677}
   m_Layer: 0
   m_Name: Jeton1
@@ -3779,46 +3615,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1185171673
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185171672}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.66, y: 3.67}
-    newSize: {x: 12.64, y: 12.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.66, y: 3.66}
-  m_EdgeRadius: 0
---- !u!114 &1185171674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185171672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59a4365c7e225e4695a172c6a45eebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Usage_positif: {fileID: 21300000, guid: ff5526757e9f5e6439085087607fca75, type: 3}
-  Usage_negatif: {fileID: 21300000, guid: acf7fb4cf331b194c8ad02423c4205d0, type: 3}
 --- !u!212 &1185171675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5007,6 +4803,7 @@ GameObject:
   - component: {fileID: 1613216616}
   - component: {fileID: 1613216615}
   - component: {fileID: 1613216619}
+  - component: {fileID: 1613216621}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5141,6 +4938,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1613216621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613216614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460f7fd7eea8055499301ee8730f39df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jeton1: {fileID: 1717592869}
+  jeton2: {fileID: 885057423}
+  jeton3: {fileID: 801751232}
+  jeton4: {fileID: 1146048720}
+  jeton5: {fileID: 1162292453}
+  jeton6: {fileID: 464669769}
+  jetons: []
 --- !u!1 &1616087899
 GameObject:
   m_ObjectHideFlags: 0
@@ -5482,7 +5298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db1be5c7c83f7844ac5e2a9108f8620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joueur_du_jeton: 1
 --- !u!212 &1717592873
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5728,9 +5543,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -5802,8 +5618,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1944729355}
   - component: {fileID: 1944729359}
-  - component: {fileID: 1944729358}
-  - component: {fileID: 1944729357}
   - component: {fileID: 1944729356}
   m_Layer: 0
   m_Name: Jeton1
@@ -5841,46 +5655,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 10, y: -10}
   m_UseGraphicAlpha: 1
---- !u!61 &1944729357
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944729354}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.66, y: 3.67}
-    newSize: {x: 12.64, y: 12.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.66, y: 3.66}
-  m_EdgeRadius: 0
---- !u!114 &1944729358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944729354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a59a4365c7e225e4695a172c6a45eebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Usage_positif: {fileID: 21300000, guid: ff5526757e9f5e6439085087607fca75, type: 3}
-  Usage_negatif: {fileID: 21300000, guid: acf7fb4cf331b194c8ad02423c4205d0, type: 3}
 --- !u!212 &1944729359
 SpriteRenderer:
   m_ObjectHideFlags: 0

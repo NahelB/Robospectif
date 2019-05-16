@@ -2,15 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class Jeton_pop : MonoBehaviour
 {
     private Vector3 screenPoint;
     private Vector3 offset;
     private Vector3 curScreenPoint;
-    public int joueur_du_jeton;
-    short jeton = 1010;
 
 
     private bool estchanger = true;
@@ -24,25 +21,8 @@ public class Jeton_pop : MonoBehaviour
         nb_bonus = new int[6];
         nb_malus = new int[6];
         this.gameObject.SetActive(false);
-        NetworkServer.RegisterHandler(jeton, onJetonReceived);
     }
 
-    private void onJetonReceived(NetworkMessage netMsg)
-    {
-        var v = netMsg.ReadMessage<MyJetonMessage>();
-        Debug.Log("joueur " + v.joueur);
-        Debug.Log("position table " + joueur_du_jeton);
-        if (joueur_du_jeton == v.joueur)
-        {
-            string s = "Jetons/" + v.sprite;
-            Debug.Log("sprite jeton : " + s);
-            Sprite jeton_actuel = Resources.Load<Sprite>(s);
-            Debug.Log("sprite jeton : " + jeton_actuel);
-            Debug.Log(this.gameObject);
-            this.gameObject.SetActive(true);
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = jeton_actuel;
-        }
-    }
 
     // Update is called once per frame
     void Update()
