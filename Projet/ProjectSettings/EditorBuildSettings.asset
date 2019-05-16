@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene5.unity
     guid: 58d394cf06e7f5b4fbe618902c788a3c
+  - enabled: 1
+    path: Assets/Scenes/Scene_ChoixJetons.unity
+    guid: 6a6bdff5c11de4948a315285351ca56c
   m_configObjects: {}

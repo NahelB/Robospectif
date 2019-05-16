@@ -6,15 +6,17 @@ using UnityEngine.UI;
 
 public class EnvoyerJeton : MonoBehaviour
 {
-    public Text text;
+    public Image image;
+    public Button button;
     NetworkClient client = script_LogosEnvironnement.client;
     short jeton = 1010;
-    public int position = selectUser.positionStatic;
+  //  public int position = selectUser.positionStatic;
 
     // Start is called before the first frame update
     void Start()
     {
-        text.text = "Joueur : " + position;
+        Debug.Log("position = " + selectUser.positionStatic);
+        button.onClick.AddListener(() => envoyer());
     }
 
     // Update is called once per frame
@@ -26,8 +28,8 @@ public class EnvoyerJeton : MonoBehaviour
     public void envoyer()
     {
         MyJetonMessage msg = new MyJetonMessage();
-        msg.joueur = position;
-        string s = this.gameObject.GetComponent<Image>().sprite.ToString();
+        msg.joueur = selectUser.positionStatic;
+        string s = image.sprite.ToString();
         string msgs = "";
         for (int i = 0; i < s.Length - 21; i++)
         {
